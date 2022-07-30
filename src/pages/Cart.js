@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '../Layouts/MainLayout'
-
-export default function Products() {
+export default function Cart() {
   return (
-    <Layout>Products</Layout>
+    <Layout>Cart</Layout>
   )
 }
