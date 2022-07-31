@@ -7,3 +7,12 @@
     color: white;
     background: rgba(89, 112, 14, 0.61);
   }
+
+#login{
+  background-image: url('./images/render\ online\ shopping\ with_1438339.jpg'); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: initial;
+  position: absolute;
+}
