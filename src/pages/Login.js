@@ -1,142 +1,125 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <section id='login' className='w-full h-full'>
-       <main>
-        <section className="absolute w-1/3 h-2/3 mx-20 my-24">
-          <div
-            className="absolute top-0  w-1/3 h-2/3"
-          ></div>
-          <div className="container mx-auto px-4 h-full">
-            <div className="flex content-center items-center justify-center h-full">
-              <div className="w-full lg:w-4/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-white border-0">
-                  <div className="rounded-t mb-0 px-6 py-6">
-                    <div className="text-center mb-3">
-                      <h6 className="text-gray-600 text-sm font-bold">
-                        Sign in with
-                      </h6>
-                    </div>
-                    <div className="btn-wrapper text-center">
-                      <button
-                        className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded outline-none focus:outline-none mr-2 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs"
-                        type="button"
-                        style={{ transition: "all .15s ease" }}
-                      >
-                        <img
-                          alt="..."
-                          className="w-5 mr-1"
-                          src={require("../images/github.svg").default}
-                        />
-                        Github
-                      </button>
-                      <button
-                        className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 uppercase shadow hover:shadow-md inline-flex items-center font-bold text-xs"
-                        type="button"
-                        style={{ transition: "all .15s ease" }}
-                      >
-                        <img
-                          alt="..."
-                          className="w-5 mr-1"
-                          src={require("../images/google.svg").default}
-                        />
-                        Google
-                      </button>
-                    </div>
-                    <hr className="mt-6 border-b-1 border-gray-400" />
-                  </div>
-                  <div className="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <div className="text-gray-500 text-center mb-3 font-bold">
-                      <small>Or sign in with credentials</small>
-                    </div>
-                    <form>
-                      <div className="relative w-full mb-3">
-                        <label
-                          className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                          placeholder="Email"
-                          style={{ transition: "all .15s ease" }}
-                        />
-                      </div>
+    <section id="login" className="w-full h-full bg-slate-100 ">
+      
+        <div className="flex justify-center">
+          <div className="flex items-center justify-center mt-6 h-full w-">
+            <div className=" flex flex-col w-full px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
+              <div className="text-amber-600 text-center my-3 font-bold">
+                <h1 className="text-xl">Sign in Phoenix Store</h1>
+                <hr className="mt-6 border-amber-700" />
+              </div>
+              <form>
+                <div className="relative w-full mb-3">
+                  <label
+                    className="block uppercase text-amber-500 text-xs font-bold mb-2"
+                    htmlFor="grid-password"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                    placeholder="Email"
+                    style={{ transition: "all .15s ease" }}
+                  />
+                </div>
 
-                      <div className="relative w-full mb-3">
-                        <label
-                          className="block uppercase text-gray-700 text-xs font-bold mb-2"
-                          htmlFor="grid-password"
-                        >
-                          Password
-                        </label>
-                        <input
-                          type="password"
-                          className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                          placeholder="Password"
-                          style={{ transition: "all .15s ease" }}
-                        />
-                      </div>
-                      <div>
-                        <label className="inline-flex items-center cursor-pointer">
-                          <input
-                            id="customCheckLogin"
-                            type="checkbox"
-                            className="form-checkbox border-0 rounded text-gray-800 ml-1 w-5 h-5"
-                            style={{ transition: "all .15s ease" }}
-                          />
-                          <span className="ml-2 text-sm font-semibold text-gray-700">
-                            Remember me
-                          </span>
-                        </label>
-                      </div>
+                <div className="relative w-full mb-3">
+                  <label
+                    className="block uppercase text-amber-500 text-xs font-bold mb-2"
+                    htmlFor="grid-password"
+                  >
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                    placeholder="Password"
+                    style={{ transition: "all .15s ease" }}
+                  />
+                </div>
+                <div>
+                  <label className="inline-flex items-center cursor-pointer">
+                    <input
+                      id="customCheckLogin"
+                      type="checkbox"
+                      className="form-checkbox border-0 rounded text-amber-500 ml-1 w-5 h-5"
+                      style={{ transition: "all .15s ease" }}
+                    />
+                    <span className="ml-2 text-sm font-semibold text-yellow-700">
+                      Remember me
+                    </span>
+                  </label>
+                </div>
 
-                      <div className="flex flex-wrap mt-2">
-                  <div className="w-1/2">
+                <div className="flex flex-wrap  justify-between mt-4 text-xs underline">
+                  <div className="w-1/3 my-2">
                     <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      href="#href"
+                      onClick={(e) => e.preventDefault()}
                       className="text-gray-900"
                     >
-                      <small>Forgot password?</small>
+                    Forgot password?
                     </a>
                   </div>
-                  <div className="w-1/2 text-right">
-                    <a
-                      href="#pablo"
-                      onClick={e => e.preventDefault()}
-                      className="text-gray-900"
-                    >
-                      <small>Create new account</small>
-                    </a>
+                  <div className="w-auto my-2">
+                    <Link to="/signup" className="text-gray-900">
+                      Don't Have an account? Sign Up
+                    </Link>
                   </div>
                 </div>
 
-                      <div className="text-center mt-6">
-                        <button
-                          className="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
-                          type="button"
-                          style={{ transition: "all .15s ease" }}
-                        >
-                          Sign In
-                        </button>
-                      </div>
-                    </form>
-                  </div>
+                <div className="text-center mt-6">
+                  <button
+                    className="bg-amber-500 text-white active:bg-gray-700 text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    Sign In
+                  </button>
                 </div>
-                
+              </form>
+              <div className="rounded-t mb-0 px-6 py-6">
+                <div className="text-center mb-3">
+                  <h6 className="text-gray-600 text-sm font-bold">
+                    Sign in with
+                  </h6>
+                </div>
+                <div className="text-center flex flex-wrap justify-center">
+                  <button
+                    className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    <img
+                      alt="..."
+                      className="w-5 mr-1"
+                      src={require("../images/icons8-facebook.svg").default}
+                    />
+                    Facebook
+                  </button>
+                  <button
+                    className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded-lg outline-none focus:outline-none mr-1 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
+                    type="button"
+                    style={{ transition: "all .15s ease" }}
+                  >
+                    <img
+                      alt="..."
+                      className="w-5 mr-1"
+                      src={require("../images/google.svg").default}
+                    />
+                    Google
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          
-        </section>
-      </main>
-
-      
+        </div>
       
     </section>
-  )
+  );
 }

@@ -9,10 +9,10 @@
   }
 
 #login{
-  background-image: url('./images/render\ online\ shopping\ with_1438339.jpg'); 
+  background-image: url('./images/happy\ shopping\ light\ spot\ poster_1035507.jpg'); 
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: initial;
+  background-repeat: no-repeat ;
+  background-size: contain;
+  background-position:initial;
   position: absolute;
 }

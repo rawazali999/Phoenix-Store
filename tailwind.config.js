@@ -12,7 +12,7 @@ module.exports = {
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }
 
-      sm: { max: "375px" },
+      sm: { max: "400px" },
       // => @media (max-width: 639px) { ... }
     },
   },
