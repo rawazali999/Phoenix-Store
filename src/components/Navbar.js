@@ -1,9 +1,17 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Disclosure } from "@headlessui/react";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link, NavLink } from "react-router-dom";
+import { logout } from "../app/slices/authenticationSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Navbar() {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
+  const auth = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
   const navigation = [
     { name: "Home", href: "/", current: true },
     { name: "Products", href: "/products", current: false },
@@ -56,29 +64,100 @@ export default function Navbar() {
               </button>
             </div>
             {/* Login and Cart buttons*/}
-            <div className="mt-4 text-md font-bold flex  text-amber-600 mx-2 sm:hidden">
-              <Link
-                to="/login"
-                className="mt-4 lg:inline-block hover:text-white px-auto py-2 flex  rounded hover:bg-amber-400 mr-8"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
+            <div className="mt-4 text-md font-bold flex mx-2 text-amber-600 sm:hidden">
+              {auth.isAuthenticated ? (
+                <>
+                  <Menu as="div" className="mt-2 mr-8 p-2">
+                    <div>
+                      <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                        <span className="sr-only">Open user menu</span>
+                        <img
+                          className="h-8 w-8 rounded-full"
+                          src="https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?w=2000"
+                          alt=""
+                        />
+                      </Menu.Button>
+                    </div>
+                    <Transition
+                      as={Fragment}
+                      enter="transition ease-out duration-100"
+                      enterFrom="transform opacity-0 scale-95"
+                      enterTo="transform opacity-100 scale-100"
+                      leave="transition ease-in duration-75"
+                      leaveFrom="transform opacity-100 scale-100"
+                      leaveTo="transform opacity-0 scale-95"
+                    >
+                      <Menu.Items className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="#href"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-amber-500"
+                              )}
+                            >
+                              Your Profile
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <a
+                              href="#href"
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-amber-500"
+                              )}
+                            >
+                              Settings
+                            </a>
+                          )}
+                        </Menu.Item>
+                        <Menu.Item>
+                          {({ active }) => (
+                            <Link
+                              to='/login'
+                              onClick={() => dispatch(logout())}
+                              className={classNames(
+                                active ? "bg-gray-100" : "",
+                                "block px-4 py-2 text-sm text-amber-500"
+                              )}
+                            >
+                              Sign out
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                </>
+              ) : (
+                <Link
+                  to="/login"
+                  className="mt-4 mr-8 lg:inline-block hover:text-white p-2 flex  rounded hover:bg-amber-400 "
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-                Log in
-              </Link>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  Log in
+                </Link>
+              )}
 
-              <Link to="/cart" className="">
+              {/* cart button */}
+
+              <Link to="/cart">
                 <span className="bg-red-500 text-sm text-white rounded-xl px-2 py-0.5 ml-4 ">
                   5
                 </span>
