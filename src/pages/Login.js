@@ -43,7 +43,7 @@ export default function Login() {
                   />
                 </div>
                 <div>
-                  <label className="inline-flex items-center cursor-pointer">
+                  <label className="flex items-center cursor-pointer">
                     <input
                       id="customCheckLogin"
                       type="checkbox"
@@ -56,8 +56,8 @@ export default function Login() {
                   </label>
                 </div>
 
-                <div className="flex flex-wrap  justify-between mt-4 text-xs underline">
-                  <div className="w-1/3 my-2">
+                <div className="flex flex-wrap justify-between mt-4 text-xs underline">
+                  <div className="w-2/5 my-2">
                     <a
                       href="#href"
                       onClick={(e) => e.preventDefault()}
@@ -66,16 +66,16 @@ export default function Login() {
                     Forgot password?
                     </a>
                   </div>
-                  <div className="w-auto my-2">
+                  <div className=" my-2">
                     <Link to="/signup" className="text-gray-900">
-                      Don't Have an account? Sign Up
+                      Don't Have an account?<br /> Sign Up
                     </Link>
                   </div>
                 </div>
 
                 <div className="text-center mt-6">
                   <button
-                    className="bg-amber-500 text-white active:bg-gray-700 text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                    className="bg-amber-500 text-white active:bg-white active:text-amber-500 text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                     type="button"
                     style={{ transition: "all .15s ease" }}
                   >
@@ -83,10 +83,10 @@ export default function Login() {
                   </button>
                 </div>
               </form>
-              <div className="rounded-t mb-0 px-6 py-6">
+              <div className="px-6 py-4">
                 <div className="text-center mb-3">
                   <h6 className="text-gray-600 text-sm font-bold">
-                    Sign in with
+                   Or Sign in with
                   </h6>
                 </div>
                 <div className="text-center flex flex-wrap justify-center">

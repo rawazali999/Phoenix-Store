@@ -1,45 +1,39 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Disclosure } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { useLocation, Link } from "react-router-dom";
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
-  const location = useLocation();
-
   const navigation = [
     { name: "Home", href: "/", current: true },
     { name: "Products", href: "/products", current: false },
     { name: "Electronics", href: "/electronics", current: false },
-      { name: "Contact Us", href: "/ContactUs", current: false },
+    { name: "Contact Us", href: "/ContactUs", current: false },
   ];
 
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col bg-slate-50 sm:px-2 px-6 shadow-md border-solid border-t-2 pb-2">
+        <div className="flex flex-col bg-slate-50 sm:px-2 px-6 md:px-2 shadow-md border-solid border-t-2 pb-2 sm:pb-0">
           {/* first row  */}
 
-          <div className="flex justify-between flex-shrink  lg:w-auto w-full  pb-5 lg:pb-0">
+          <div className="flex justify-between flex-shrink  lg:w-auto w-full  pb-5 sm:pb-0">
             {/* name and logo */}
-            <div className="flex items-start flex-shrink text-yellow-900 mt-4 mb-0">
+            <div className="flex items-start flex-shrink text-orange-600 mt-4 mb-0">
               <img
-                className="mx-1 w-16 h-auto"
-                src="https://phoenixpwn.com/phoenix.png"
+                className="mx-1 w-16 h-auto sm:w-12  "
+                src={require("../images/phoenix-logo-free-download-141875.png")}
                 alt="logo"
               />
-              <span className="font-semibold mt-6 text-2xl tracking-tight ">
+              <span className="font-semibold sm:text-lg md:text-xl mt-4 sm:mt-3 text-3xl tracking-tight ">
                 Phoenix Store
               </span>
             </div>
 
             {/* search bar */}
-            <div className="relative sm:hidden flex-shrink text-gray-600 mt-8 flex ml-8 mr-24 md:w-40 ">
+            <div className="relative flex-shrink sm:hidden text-gray-600 mt-8 mr-10 flex mx-2 w-auto">
               <input
-                className="border-2 border-grey-500 bg-white md:w-40 h-10 pl-2 pr-16 rounded-lg text-lg focus:outline-none focus:border-yellow-500"
+                className="border-2 border-grey-500 bg-white w-auto md:w-36  h-10 pl-2 pr-16 rounded-lg text-lg md:text-sm focus:outline-none focus:border-yellow-500"
                 type="search"
                 name="search"
                 placeholder="Search"
@@ -61,41 +55,53 @@ export default function Navbar() {
                 </svg>
               </button>
             </div>
-            <div className="mt-6 text-md font-bold flex  text-yellow-700 mx-2 sm:hidden">
+            {/* Login and Cart buttons*/}
+            <div className="mt-4 text-md font-bold flex  text-amber-600 mx-2 sm:hidden">
               <Link
                 to="/login"
-                className="mt-4 lg:inline-block hover:text-white px-4 py-2 flex  rounded hover:bg-yellow-500 mr-8"
+                className="mt-4 lg:inline-block hover:text-white px-auto py-2 flex  rounded hover:bg-amber-400 mr-8"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-</svg>
-                 Log in
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                Log in
               </Link>
-              
+
               <Link to="/cart" className="">
-              <span className="bg-red-500 text-sm text-white rounded-xl px-2 py-0.5 ml-4 ">5</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              
+                <span className="bg-red-500 text-sm text-white rounded-xl px-2 py-0.5 ml-4 ">
+                  5
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
               </Link>
-              
             </div>
 
-            <div className="hidden sm:block mt-10">
+            <div className="hidden sm:block mt-6">
               {/* Mobile menu button*/}
-              <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-yellow-600 hover:text-white hover:bg-yellow-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+              <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-amber-500 hover:text-white hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
                   <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -107,38 +113,38 @@ export default function Navbar() {
           </div>
           {/* second row */}
           <div className=" w-full sm:hidden flex items-center justify-center px-8">
-            <div className="text-md font-bold text-yellow-700 flex justify-around">
+            <div className="text-md  font-bold text-amber-400 flex justify-around">
               {navigation.map((item) => (
-                <Link
+                <NavLink
                   key={item.name}
-                  as={Link}
                   to={item.href}
-                  className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-yellow-500 mr-2"
-                  aria-current={item.current ? "page" : undefined}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-amber-400 text-white  mt-4 px-4 py-2 rounded mr-2 "
+                      : " bg-slate-50 text-amber-500 mt-4 px-4 py-2 rounded mr-2 hover:bg-amber-400 hover:text-slate-50 "
+                  }
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </div>
 
-          <Disclosure.Panel className="bg-yellow-600 rounded-lg">
+          <Disclosure.Panel className="bg-slate-50 rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
-                <Disclosure.Button
+                <NavLink
                   key={item.name}
-                  as={Link}
                   to={item.href}
-                  className={classNames(
-                    location.pathname === item.href
-                      ? "bg-white text-yellow-600"
-                      : "text-white hover:bg-white hover:text-yellow-600",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-amber-400 text-white  block px-3 py-2 rounded-md text-base font-medium "
+                      : "  text-amber-500  hover:bg-amber-400 hover:text-slate-50 block px-3 py-2 rounded-md text-base font-medium "
+                  }
                   aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}
-                </Disclosure.Button>
+                </NavLink>
               ))}
             </div>
           </Disclosure.Panel>
