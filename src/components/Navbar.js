@@ -64,10 +64,11 @@ export default function Navbar() {
               </button>
             </div>
             {/* Login and Cart buttons*/}
-            <div className="mt-4 text-md font-bold flex mx-2 text-amber-600 sm:hidden">
+            <div className="mt-4 text-md font-bold  flex justify-between mx-2  text-amber-600 sm:hidden">
               {auth.isAuthenticated ? (
                 <>
-                  <Menu as="div" className="mt-2 mr-8 p-2">
+                   
+                  <Menu as="div" className="mt-5 ">
                     <div>
                       <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                         <span className="sr-only">Open user menu</span>
@@ -131,6 +132,9 @@ export default function Navbar() {
                       </Menu.Items>
                     </Transition>
                   </Menu>
+                  <div className="text-gray-500 mr-4 ml-2 mt-2 py-4">
+                      {auth.username}
+                 </div>
                 </>
               ) : (
                 <Link

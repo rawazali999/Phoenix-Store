@@ -12,15 +12,16 @@ export default function Login() {
   function submitHandler(e) {
     e.preventDefault();
     dispatch(login(form.username));
-    navigate("/", { replace: true });
+    navigate("/", { replace: true }); 
   }
 
   function onChangeHandler(event) {
     const name = event.target.name;
     const value = event.target.value;
     setForm((values) => ({ ...values, [name]: value }));
+    
 
-    console.log(form);
+   
   }
   return (
     <section id="login" className="w-full h-full bg-slate-100 ">
@@ -44,9 +45,9 @@ export default function Login() {
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                   placeholder="username"
                   style={{ transition: "all .15s ease" }}
-                  id="username"
-                  value={form.username}
+                  name="username"
                   onChange={onChangeHandler}
+                  value={form.username || ''}
                 />
               </div>
 
@@ -62,8 +63,8 @@ export default function Login() {
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                   placeholder="Password"
                   style={{ transition: "all .15s ease" }}
-                  id="password"
-                  value={form.password}
+                  name='password'
+                  value={form.password || ''}
                   onChange={onChangeHandler}
                 />
               </div>
