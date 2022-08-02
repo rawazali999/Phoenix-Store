@@ -28,23 +28,23 @@ export default function Navbar() {
 
           <div className="flex justify-between flex-shrink  lg:w-auto w-full  pb-5 sm:pb-0">
             {/* name and logo */}
-            <div className="flex items-start flex-shrink text-orange-600 mt-4 mb-0">
+            <div className="flex items-start flex-shrink text-myOrange -600 mt-4 mb-0">
               <img
                 className="mx-1 w-16 h-auto sm:w-12  "
                 src={require("../images/phoenix-logo-free-download-141875.png")}
                 alt="logo"
               />
-              <span className="font-semibold sm:text-xl md:text-xl mt-4 sm:mt-3 text-3xl tracking-tight ">
+              <span className="font-semibold text-myRed sm:text-xl md:text-xl mt-4 sm:mt-3 text-3xl  ">
                 Phoenix Store
               </span>
             </div>
 
             {/* search bar */}
             <div className="relative flex-shrink sm:hidden text-gray-600 mt-8 mr-10 flex mx-2 w-auto">
-             <SearchBar/>
+              <SearchBar />
             </div>
             {/* Login and Cart buttons*/}
-            <div className="mt-3 text-md font-bold  flex justify-between mx-2 sm:mx-0  text-amber-600">
+            <div className="mt-3 text-md font-bold  flex justify-between mx-2 sm:mx-0  text-myOrange ">
               {auth.isAuthenticated ? (
                 <>
                   <Menu as="div" className="mt-5">
@@ -74,7 +74,7 @@ export default function Navbar() {
                               href="#href"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-amber-500"
+                                "block px-4 py-2 text-sm text-myOrange "
                               )}
                             >
                               Your Profile
@@ -87,7 +87,7 @@ export default function Navbar() {
                               href="#href"
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-amber-500"
+                                "block px-4 py-2 text-sm text-myOrange "
                               )}
                             >
                               Settings
@@ -101,7 +101,7 @@ export default function Navbar() {
                               onClick={() => dispatch(logout())}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm text-amber-500"
+                                "block px-4 py-2 text-sm text-myOrange "
                               )}
                             >
                               Sign out
@@ -118,7 +118,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="mt-3  mr-8 sm:mr-2 lg:inline-block hover:text-white p-3 sm:mb-1 flex  rounded-full hover:bg-amber-400 "
+                  className="mt-3  mr-8 sm:mr-2 lg:inline-block hover:text-white p-3 sm:mb-1 flex  rounded-full hover:bg-myYellow "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,12 +140,12 @@ export default function Navbar() {
               {/* cart button */}
 
               <Link to="/cart">
-                <span className="bg-red-500 text-sm text-white rounded-full px-2 py-0.5 ml-4 ">
+                <span className="bg-myRed text-sm text-white rounded-full px-2 py-0.5 ml-4 ">
                   5
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-7 w-7 sm:w-6 sm:h-6 hover:text-amber-400"
+                  className="h-7 w-7 sm:w-6 sm:h-6 hover:text-yellow"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -159,33 +159,30 @@ export default function Navbar() {
                 </svg>
               </Link>
 
-
               <div className="hidden sm:block mx-2 mt-4">
-              {/* Mobile menu button*/}
-              <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-amber-500 hover:text-white hover:bg-amber-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                <span className="sr-only">Open main menu</span>
-                {open ? (
-                  <XIcon className="block h-6 w-6" aria-hidden="true" />
-                ) : (
-                  <MenuIcon className="block h-6 w-6" aria-hidden="true" />
-                )}
-              </Disclosure.Button>
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-myOrange  hover:text-white hover:bg-myYellow focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
             </div>
-            </div>
-
-            
           </div>
           {/* second row */}
           <div className=" w-full sm:hidden flex items-center justify-center px-8">
-            <div className="text-md  font-bold text-amber-400 flex justify-around">
+            <div className="text-md  font-bold text-yellow flex justify-around">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-amber-400 text-white  mt-4 px-4 py-2 rounded mr-2 "
-                      : " bg-slate-50 text-amber-500 mt-4 px-4 py-2 rounded mr-2 hover:bg-amber-400 hover:text-slate-50 "
+                      ? "bg-myYellow  text-white  mt-4 px-4 py-2 rounded mr-2 "
+                      : " bg-slate-50 text-myOrange  mt-4 px-4 py-2 rounded mr-2 hover:bg-myYellow  hover:text-slate-50 "
                   }
                 >
                   {item.name}
@@ -202,8 +199,8 @@ export default function Navbar() {
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-amber-400 text-white  block px-3 py-2 rounded-md text-base font-medium "
-                      : "  text-amber-500  hover:bg-amber-400 hover:text-slate-50 block px-3 py-2 rounded-md text-base font-medium "
+                      ? "bg-myOrange text-white  block px-3 py-2 rounded-md text-base font-medium "
+                      : "  text-myOrange   hover:bg-myYellow  hover:text-slate-50 block px-3 py-2 rounded-md text-base font-medium "
                   }
                   aria-current={item.current ? "page" : undefined}
                 >

@@ -26,16 +26,16 @@ export default function Login() {
   return (
     <section id="login" className="w-full h-full bg-slate-100 ">
       <div className="flex justify-center">
-        <div className="flex items-center justify-center mt-16 h-full w-">
-          <div className=" flex flex-col w-full px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
-            <div className="text-amber-600 text-center my-3 font-bold">
-              <h1 className="text-xl">Sign in Phoenix Store</h1>
+        <div className="flex items-center justify-center mt-16 h-full">
+          <div className=" flex flex-col w-full sm:w-4/5 px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
+            <div className="text-center my-3 font-bold">
+              <h1 className="text-myRed text-xl">Sign in Phoenix Store</h1>
               <hr className="mt-6 border-amber-700" />
             </div>
             <form onSubmit={submitHandler}>
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-amber-500 text-xs font-bold mb-2"
+                  className="block uppercase text-myOrange  text-xs font-bold mb-2"
                   htmlFor="username"
                 >
                   Username
@@ -53,7 +53,7 @@ export default function Login() {
 
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-amber-500 text-xs font-bold mb-2"
+                  className="block uppercase text-myOrange  text-xs font-bold mb-2"
                   htmlFor="password"
                 >
                   Password
@@ -73,10 +73,10 @@ export default function Login() {
                   <input
                     id="customCheckLogin"
                     type="checkbox"
-                    className="form-checkbox border-0 rounded text-amber-500 ml-1 w-5 h-5"
+                    className="form-checkbox border-0 rounded text-myOrange  ml-1 w-5 h-5"
                     style={{ transition: "all .15s ease" }}
                   />
-                  <span className="ml-2 text-sm font-semibold text-yellow-700">
+                  <span className="ml-2 text-sm font-semibold text-myOrange">
                     Remember me
                   </span>
                 </label>
@@ -102,7 +102,7 @@ export default function Login() {
 
               <div className="text-center mt-6">
                 <button
-                  className="bg-amber-500 text-white active:bg-white active:text-amber-500 text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                  className="bg-myOrange text-white active:bg-white active:text-myOrange  text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                   type="submit"
                   style={{ transition: "all .15s ease" }}
                 >
@@ -116,9 +116,9 @@ export default function Login() {
                   Or Sign in with
                 </h6>
               </div>
-              <div className="text-center flex flex-wrap justify-center">
+              <div className="text-center grid grid-cols-2 sm:grid-cols-1 ">
                 <button
-                  className="bg-white active:bg-gray-100 text-gray-800 px-4 py-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
+                  className="bg-white active:bg-gray-100 text-gray-800 p-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
                   type="button"
                   style={{ transition: "all .15s ease" }}
                 >

@@ -13,9 +13,8 @@ import Signup from "./pages/Signup";
 
 function App() {
   return (
-    <>
-      
-
+    <div className="font-poppins">
+    
       <Routes>
         <Route path="/" element={<Home />} />
   
@@ -28,7 +27,7 @@ function App() {
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="signup" element={<Signup />} />
       </Routes>
-    </>
+    </div>
   );
 }
 

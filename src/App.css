@@ -2,10 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=PT+Sans:ital@1&family=Poppins&family=Roboto+Condensed&display=swap');
 
 ::selection {
     color: white;
-    background: rgba(89, 112, 14, 0.61);
+    background: rgba(193, 79, 17, 0.61);
   }
 
 #login{

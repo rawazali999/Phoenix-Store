@@ -12,7 +12,7 @@ export default function SearchBar() {
     <>
       <Menu as="div" className="relative inline-block text-left">
         
-          <Menu.Button className="inline-flex justify-center w-full rounded-l-lg border border-gray-300 shadow-sm p-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
+          <Menu.Button className="inline-flex justify-center w-full rounded-l-lg border-2 border-r-0 border-gray-300 shadow-sm p-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none">
             Catagories
             <ChevronDownIcon
               className="-mr-1 ml-2 h-5 w-5"
@@ -30,7 +30,7 @@ export default function SearchBar() {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+          <Menu.Items className="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="py-1">
               <Menu.Item>
                 {({ active }) => (
@@ -41,7 +41,7 @@ export default function SearchBar() {
                       "block px-4 py-2 text-sm"
                     )}
                   >
-                    Account settings
+                    Men Clothes
                   </a>
                 )}
               </Menu.Item>
@@ -54,7 +54,7 @@ export default function SearchBar() {
                       "block px-4 py-2 text-sm"
                     )}
                   >
-                    Support
+                    Women Clothes
                   </a>
                 )}
               </Menu.Item>
@@ -67,7 +67,7 @@ export default function SearchBar() {
                       "block px-4 py-2 text-sm"
                     )}
                   >
-                    License
+                    Electronics
                   </a>
                 )}
               </Menu.Item>
@@ -81,7 +81,7 @@ export default function SearchBar() {
                         "block w-full text-left px-4 py-2 text-sm"
                       )}
                     >
-                      Sign out
+                      Sport
                     </button>
                   )}
                 </Menu.Item>
@@ -103,7 +103,7 @@ export default function SearchBar() {
           <input
             type="search"
             id="default-search"
-            className="block  p-2  w-full text-sm text-gray-100 bg-gray-50 rounded-r-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            className="block  p-2  w-full text-sm text-navy bg-white rounded-r-lg border-2 border-gray-300 focus:border-amber-400 focus:outline-none "
             placeholder="Search..."
             required
           />

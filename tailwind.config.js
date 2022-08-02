@@ -1,11 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend:{
-      
+    extend: {
+      fontFamily: {
+        lato: ["Lato"],
+        poppins: ["Poppins"],
+        PtSans: ["PT Sans"],
+        Robonto: ["Roboto Condensed"],
+      },
+      colors: {
+        navy: "#143F6B",
+        myRed: "#F55353",
+        myOrange: "#FEB139",
+        myYellow: "#FFCD38",
+      },
     },
-
 
     screens: {
       xl: { max: "1279px" },
