@@ -2,6 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
+    extend:{
+      
+    },
+
+
     screens: {
       xl: { max: "1279px" },
       // => @media (max-width: 1279px) { ... }
@@ -12,7 +17,7 @@ module.exports = {
       md: { max: "767px" },
       // => @media (max-width: 767px) { ... }
 
-      sm: { max: "400px" },
+      sm: { max: "520px" },
       // => @media (max-width: 639px) { ... }
     },
   },
