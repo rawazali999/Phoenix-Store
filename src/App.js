@@ -14,7 +14,7 @@ import Signup from "./pages/Signup";
 function App() {
   return (
     <div className="font-poppins">
-    
+     
       <Routes>
         <Route path="/" element={<Home />} />
   
