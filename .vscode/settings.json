@@ -18,5 +18,9 @@
         "titleBar.inactiveBackground": "#00386599",
         "titleBar.inactiveForeground": "#e7e7e799"
     },
-    "peacock.color": "003865"
+    "peacock.color": "003865",
+    "cSpell.words": [
+        "headlessui",
+        "heroicons"
+    ]
 }

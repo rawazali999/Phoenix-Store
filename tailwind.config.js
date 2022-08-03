@@ -11,10 +11,12 @@ module.exports = {
         Robonto: ["Roboto Condensed"],
       },
       colors: {
-        navy: "#143F6B",
-        myRed: "#F55353",
-        myOrange: "#FEB139",
-        myYellow: "#FFCD38",
+        custom1: "#001d3d",
+        custom2: "#F55353",
+        custom3: "#FEB139",
+        custom4: "#FFCD38",
+        custom5: "#219ebc",
+        custom6: "#8ecae6",
       },
     },
 
