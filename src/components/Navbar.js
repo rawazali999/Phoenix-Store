@@ -23,10 +23,10 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col bg-white  md:px-4 px-1 border-solid border-t-2 sm:pb-2 ">
+        <div className="flex flex-col bg-white  md:px-4 px-1 border-solid shadow-sm border-b-2 sm:pb-2 ">
           {/* first row  */}
 
-          <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-5 ">
+          <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-2 ">
             {/* name and logo */}
             <div className="flex items-start flex-shrink text-custom3  mt-4 mb-0">
               <img
