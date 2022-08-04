@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <img
           className="object-cover w-full h-56 rounded shadow-xl lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-          src={require('../images/heroimage.png')}
+          src={require("../images/heroimage.png")}
           alt="shopping"
         />
       </div>
