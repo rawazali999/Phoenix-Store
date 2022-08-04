@@ -8,10 +8,10 @@ export default function SearchBar() {
         class="bg-white border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
       >
         <option selected>All</option>
-        <option value="US">United States</option>
-        <option value="CA">Canada</option>
-        <option value="FR">France</option>
-        <option value="DE">Germany</option>
+        <option value="US">Men</option>
+        <option value="CA">Women</option>
+        <option value="FR">Electronics</option>
+        <option value="DE">Sport</option>
       </select>
 
       <form>

@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col bg-slate-50  md:px-4 px-1 shadow-md border-solid border-t-2 sm:pb-2 ">
+        <div className="flex flex-col bg-white  md:px-4 px-1 border-solid border-t-2 sm:pb-2 ">
           {/* first row  */}
 
           <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-5 ">
@@ -181,7 +181,7 @@ export default function Navbar() {
                   className={({ isActive }) =>
                     isActive
                       ? "bg-custom4  text-white  mt-4 px-4 py-2 rounded mr-2 "
-                      : " bg-slate-50 text-custom3   mt-4 px-4 py-2 rounded mr-2 hover:bg-custom4  hover:text-slate-50 "
+                      : " bg-white text-custom3   mt-4 px-4 py-2 rounded mr-2 hover:bg-custom4  hover:text-slate-50 "
                   }
                 >
                   {item.name}
