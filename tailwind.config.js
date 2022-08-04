@@ -21,17 +21,17 @@ module.exports = {
     },
 
     screens: {
-      xl: { max: "1279px" },
-      // => @media (max-width: 1279px) { ... }
+      sm: "526px",
+      // => @media (min-width: 640px) { ... }
 
-      lg: { max: "1023px" },
-      // => @media (max-width: 1023px) { ... }
+      md: "768px",
+      // => @media (min-width: 768px) { ... }
 
-      md: { max: "767px" },
-      // => @media (max-width: 767px) { ... }
+      lg: "1024px",
+      // => @media (min-width: 1024px) { ... }
 
-      sm: { max: "520px" },
-      // => @media (max-width: 639px) { ... }
+      xl: "1280px",
+      // => @media (min-width: 1280px) { ... }
     },
   },
   plugins: [],
