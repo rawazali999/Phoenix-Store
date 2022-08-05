@@ -4,14 +4,19 @@ import { IconButton, Tooltip } from "@mui/material";
 
 export default function AddToFav() {
   const [buttonColor, setButtonColor] = useState("white");
+  const [title, setTitle] = useState("add to favorites");
   function changeColor(e) {
     if (buttonColor === "white") {
       setButtonColor("red");
-    } else setButtonColor("white");
+      setTitle("remove from favorites");
+    } else {
+      setButtonColor("white");
+      setTitle("add to favorites");
+    }
   }
   return (
     <>
-      <Tooltip title="add to favorites">
+      <Tooltip title={title}>
         <IconButton>
           <FavoriteIcon style={{ fill: buttonColor }} onClick={changeColor} />
         </IconButton>
