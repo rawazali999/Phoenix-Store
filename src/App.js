@@ -10,6 +10,7 @@ import Cart from "./pages/Cart";
 import Electronics from "./pages/Electronics";
 import ContactUs from "./pages/ContactUs";
 import Signup from "./pages/Signup";
+import NotFound404Page from "./pages/NotFound404Page";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
         <Route path="electronics" element={<Electronics />} />
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="*" element={<NotFound404Page/>} />
+
       </Routes>
     </div>
   );
