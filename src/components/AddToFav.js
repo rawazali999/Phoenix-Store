@@ -1,13 +1,13 @@
 import { React, useState } from "react";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import { IconButton, Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 export default function AddToFav() {
   const [buttonColor, setButtonColor] = useState("white");
   const [title, setTitle] = useState("add to favorites");
-  function changeColor(e) {
+  function changeColor() {
     if (buttonColor === "white") {
-      setButtonColor("red");
+      setButtonColor("#FF1A1A");
       setTitle("remove from favorites");
     } else {
       setButtonColor("white");
@@ -17,9 +17,10 @@ export default function AddToFav() {
   return (
     <>
       <Tooltip title={title}>
-        <IconButton>
-          <FavoriteIcon style={{ fill: buttonColor }} onClick={changeColor} />
-        </IconButton>
+        <FavoriteIcon
+          style={{ fill: buttonColor, cursor: "pointer" }}
+          onClick={changeColor}
+        />
       </Tooltip>
     </>
   );
