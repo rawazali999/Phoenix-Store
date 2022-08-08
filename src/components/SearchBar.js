@@ -1,13 +1,12 @@
 import React from "react";
 export default function SearchBar() {
-
   return (
     <>
       <select
         id="countries"
-        class="bg-white border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
+        className="bg-white border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
       >
-        <option selected>All</option>
+        <option defaultValue={"All"}>All</option>
         <option value="US">Men</option>
         <option value="CA">Women</option>
         <option value="FR">Electronics</option>

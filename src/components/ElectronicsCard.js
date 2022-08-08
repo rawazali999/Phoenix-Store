@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Rating from "@mui/material/Rating";
+import { Rating } from "@mui/material";
 import { delimiter } from "../utilities/delimiter";
 import AddToFav from "./AddToFav";
 
-export default function ProductCard({ product }) {
+export default function ElectronicsCard({ product }) {
   return (
     <div className="max-w-xs mx-auto overflow-hidden  border-custom1 bg-white rounded-2xl shadow-2xl">
       <Link to={`/products/${product.id}`}>
