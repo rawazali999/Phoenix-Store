@@ -6,7 +6,7 @@
 
 ::selection {
     color: white;
-    background: rgba(193, 79, 17, 0.61);
+    background: rgb(21, 150, 255);
   }
 
 #login{
@@ -26,3 +26,33 @@
   background-position:initial;
   position: absolute;
 }
+
+.active-nav{
+    display: inline-block;
+    padding-bottom:2px;
+    background-image: linear-gradient(#001d3d,#001d3d);
+    background-position: 100% 100%; 
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    transition:
+      background-size 0.3s,
+      background-position 0s 0.3s; /*change after the size immediately*/
+
+}
+
+.navlink{
+  display: inline-block;
+  padding-bottom:2px;
+  background-image: linear-gradient(#001d3d, #001d3d);
+  background-position: 0 100%;
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  transition:
+    background-size 0.3s,
+    background-position 0s 0.3s; /*change after the size immediately*/
+
+}
+.navlink:hover {
+    background-position: 100% 100%; 
+    background-size: 100% 2px;
+  }

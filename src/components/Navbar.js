@@ -180,8 +180,8 @@ export default function Navbar() {
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-custom4  text-white  mt-4 px-4 py-2 rounded mr-2 "
-                      : " bg-white text-custom3   mt-4 px-4 py-2 rounded mr-2 hover:bg-custom4  hover:text-slate-50 "
+                      ? " active-nav text-custom1  mt-4 px-4 py-2 mr-2 "
+                      : " text-custom1 navlink mt-4 px-4 py-2 mr-2  "
                   }
                 >
                   {item.name}
