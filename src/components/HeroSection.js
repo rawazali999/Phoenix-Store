@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 
 export default function HeroSection() {
   return (
@@ -17,23 +18,23 @@ export default function HeroSection() {
             Welcome to Phoenix Store
           </p>
           <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-custom1 sm:text-4xl sm:leading-none">
-            Anything you Want <br/> We Have it Here ...
+            Anything you Want <br /> We Have it Here ...
           </h2>
           <p className="pr-5 text-base text-custom1 md:text-lg">
             Our store has best products in each category :
           </p>
           <p className="pr-5 mb-5 text-base text-custom2 md:text-lg">
-            Electronics , Men Clothes , Women Clothes <br/> Sport Clothes
+            Electronics , Men Clothes , Women Clothes <br /> Sport Clothes
           </p>
           <div className="flex items-center">
             <Link
               to="/products"
-              className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-custom1 bg-custom4 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-custom1 bg-custom4 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
             >
-              Shop Now
+              Shop Now <ShoppingBagOutlinedIcon className="ml-2" />
             </Link>
             <Link
-              to='/login'
+              to="/login"
               aria-label=""
               className="inline-flex items-center font-semibold text-custom1 hover:text-slate-500"
             >

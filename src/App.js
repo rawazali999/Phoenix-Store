@@ -11,6 +11,8 @@ import Electronics from "./pages/Electronics";
 import ContactUs from "./pages/ContactUs";
 import Signup from "./pages/Signup";
 import NotFound404Page from "./pages/NotFound404Page";
+import Men from "./pages/Men";
+import Women from "./pages/Women";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="products" element={<Products />} />
+        <Route path="men" element={<Men/>} />
+        <Route path="women" element={<Women />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="cart" element={<Cart />} />
         <Route path="electronics" element={<Electronics />} />

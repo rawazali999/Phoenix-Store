@@ -16,6 +16,8 @@ export default function Navbar() {
   const navigation = [
     { name: "Home", href: "/", current: true },
     { name: "Products", href: "/products", current: false },
+    { name: "Men", href: "/men", current: false },
+    { name: "Women", href: "/women", current: false },
     { name: "Electronics", href: "/electronics", current: false },
     { name: "Contact Us", href: "/ContactUs", current: false },
   ];
