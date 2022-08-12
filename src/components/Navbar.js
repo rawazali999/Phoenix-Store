@@ -175,15 +175,15 @@ export default function Navbar() {
           </div>
           {/* second row */}
           <div className=" w-full hidden sm:flex items-center justify-center px-8">
-            <div className="text-md  font-bold text-yellow flex justify-around">
+            <div className="text-sm sm:text-md font-bold flex justify-around">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? " active-nav text-custom1  mt-4 px-4 py-2 mr-2 "
-                      : " text-custom1 navlink mt-4 px-4 py-2 mr-2  "
+                      ? " active-nav text-custom1  mt-4 px-3 py-2 mr-2 "
+                      : " text-custom1 navlink mt-4 px-3 py-2 mr-2  "
                   }
                 >
                   {item.name}
