@@ -1,4 +1,8 @@
 import React from "react";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import Email from "@mui/icons-material/Email";
 
 export default function Footer() {
   return (
@@ -14,8 +18,9 @@ export default function Footer() {
         />
       </svg>
       <div className="px-4 pt-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="grid gap-8 row-gap-10 mb-8 lg:grid-cols-6">
-          <div className="md:max-w-md lg:col-span-2">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 row-gap-10 mb-8 ">
+          {/* logo and contact details */}
+          <div className="col-span-2">
             <a
               href="/"
               aria-label="Go home"
@@ -31,123 +36,131 @@ export default function Footer() {
                 Phoenix Store
               </span>
             </a>
-            <div className="mt-4 lg:max-w-sm">
-              <p className="text-sm text-custom1">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
-              </p>
+            <div className="m-4 lg:max-w-sm grid grid-cols-1">
+              <div className="my-1">
+                <LocationOnIcon />
+                <span className="mx-4">Erbil , Kurdistan</span>
+              </div>
+              <div className="my-1">
+                <PhoneIcon />
+                <span className="mx-4 ">+964 750 123 4567</span>
+              </div>
+              <div className="my-1">
+                <EmailIcon />
+                <span className="mx-4 ">info@company.com</span>
+              </div>
             </div>
           </div>
-          <div className="grid grid-cols-2 row-gap-8  lg:col-span-4 md:grid-cols-4">
-            <div>
-              <p className="font-semibold tracking-wide ">Category</p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Men
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Women
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Electronics
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Sport
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="font-semibold tracking-wide text-custom1">Cherry</p>
-              <ul className="mt-2 space-y-2">
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Web
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    eCommerce
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Entertainment
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/"
-                    className="transition-colors duration-300 text-custom1 hover:text-custom5"
-                  >
-                    Portfolio
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="md:max-w-md px-2 sm:px-10 col-span-2">
-              <span className="text-base font-medium tracking-wide text-white">
-                Subscribe for updates
-              </span>
-              <form className="flex flex-col mt-4 md:flex-row">
-                <input
-                  placeholder="Email"
-                  required
-                  type="text"
-                  className="flex-grow w-56 h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
-                />
-                <button
-                  type="submit"
-                  className="inline-flex w-28 items-center justify-center h-12 px-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-custom1 hover:bg-custom5 focus:shadow-outline focus:outline-none"
+          {/* categories links */}
+          <div className="my-2 px-2">
+            <p className="font-semibold tracking-wide ">Category</p>
+            <ul className="mt-2 space-y-2">
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
                 >
-                  Subscribe
-                </button>
-              </form>
-              <p className="mt-4 text-sm text-gray-500">
-                Bacon ipsum dolor amet short ribs pig sausage prosciuto chicken
-                spare ribs salami.
-              </p>
-            </div>
+                  Men
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Women
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Electronics
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Sport
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* some other links */}
+          <div className="my-2 px-4 ">
+            <p className="font-semibold tracking-wide text-custom1">Cherry</p>
+            <ul className="mt-2 space-y-2">
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Web
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  eCommerce
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Business
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Entertainment
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="transition-colors duration-300 text-custom1 hover:text-custom5"
+                >
+                  Portfolio
+                </a>
+              </li>
+            </ul>
+          </div>
+          {/* email input with button for sub */}
+          <div className="md:max-w-md px-2 sm:px-10 col-span-2">
+            <span className="text-base font-medium tracking-wide text-white">
+              Subscribe for updates
+            </span>
+            <form className="flex flex-col mt-4 md:flex-row">
+              <input
+                placeholder="Email"
+                required
+                type="text"
+                className="flex-grow w-56 h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+              />
+              <button
+                type="submit"
+                className="inline-flex w-28 items-center justify-center h-12 px-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-custom1 hover:bg-custom5 focus:shadow-outline focus:outline-none"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p className="mt-4 text-sm text-gray-500">
+              get information about latest news , offers, discounts...
+            </p>
           </div>
         </div>
       </div>
+      {/* bottom part of footer */}
       <div className="flex flex-col justify-between px-6 py-5 border-t-2 border-white sm:flex-row">
         <p className="text-sm font-semibold text-custom1">
           © Copyright 2022 Phoenix Store. All rights reserved.

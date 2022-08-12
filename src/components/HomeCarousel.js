@@ -24,13 +24,13 @@ export default function HomeCarousel() {
   };
   return (
     <>
-    <h1 className="flex items-center justify-center text-3xl py-4 text-custom1">
+      <h1 className="flex items-center justify-center text-3xl py-4 text-custom1">
         Our Product categories
       </h1>
       <Carousel
-        containerClass=" w-1/2 h-full m-auto carousel-container"
+        containerClass=" w-3/5  mx-auto carousel-container"
         swipeable={true}
-        showDots={true}
+        showDots={false}
         draggable={true}
         responsive={responsive}
         minimumTouchDrag={30}
@@ -43,7 +43,7 @@ export default function HomeCarousel() {
         dotListClass="custom-dot-list-style"
       >
         {/* first slide */}
-        <Link to={"/men"} className="grid-cols-3 gap-1 grid rounded-md ">
+        <Link to={"/men"} className="grid-cols-3 gap-1 grid">
           <p className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2">
             Men Clothes
           </p>

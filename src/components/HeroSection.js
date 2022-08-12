@@ -14,7 +14,7 @@ export default function HeroSection() {
       </div>
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg  lg:pr-5">
-          <p className="inline-block px-3 w-full mb-12 text-lg text-center font-semibold tracking-wider text-custom2  bg-teal-accent-400">
+          <p className="inline-block px-3 w-full mb-12 text-lg sm:text-3xl  text-center font-semibold tracking-wider text-custom2  bg-teal-accent-400">
             Welcome to Phoenix Store
           </p>
           <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-custom1 sm:text-4xl sm:leading-none">
