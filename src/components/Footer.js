@@ -2,7 +2,6 @@ import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
-import Email from "@mui/icons-material/Email";
 
 export default function Footer() {
   return (
