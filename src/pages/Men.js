@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import Layout from "../Layouts/MainLayout";
+import Spinner from "../components/Spinner";
 
 export default function Men() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,12 +22,14 @@ export default function Men() {
   }, []);
 
   if (isLoading) {
-    return <Layout>loading....</Layout>;
+    return <Layout>
+      <Spinner/>
+    </Layout>;
   }
   return (
     <Layout>
       <h1 className="text-md sm:text-3xl mx-10 text-center text-custom1 font-semibold my-4 ">
-        Electronics
+        Men
       </h1>
       <div className="container  mx-auto p-10 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  gap-10 object-fill">
         {products.map((product) => {

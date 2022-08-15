@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../components/ProductCard";
 import Layout from "../Layouts/MainLayout";
+import Spinner from "../components/Spinner";
 
 export default function Electronics() {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +22,11 @@ export default function Electronics() {
   }, []);
 
   if (isLoading) {
-    return <Layout>loading....</Layout>;
+    return (
+      <Layout>
+        <Spinner />
+      </Layout>
+    );
   }
   return (
     <Layout>
