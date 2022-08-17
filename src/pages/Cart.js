@@ -1,7 +1,10 @@
-import React from 'react'
-import Layout from '../Layouts/MainLayout'
+import React from "react";
+import CartPage from "../components/CartPage";
+import Layout from "../Layouts/MainLayout";
 export default function Cart() {
   return (
-    <Layout>Cart</Layout>
-  )
+    <Layout>
+      <CartPage />
+    </Layout>
+  );
 }

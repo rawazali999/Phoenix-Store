@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { logout } from "../app/slices/authenticationSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "./SearchBar";
+import CartPage from "./CartPage";
 
 export default function Navbar() {
   function classNames(...classes) {
