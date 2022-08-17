@@ -116,7 +116,7 @@ export default function Login() {
                   Or Sign in with
                 </h6>
               </div>
-              <div className="text-center grid  grid-cols-2 ">
+              <div className="text-center grid grid-cols-1 sm:grid-cols-2 ">
                 <button
                   className="bg-white active:bg-gray-100 text-gray-800 p-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
                   type="button"

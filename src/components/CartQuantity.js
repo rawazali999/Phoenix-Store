@@ -20,6 +20,7 @@ export default function CartQuantity() {
           {quantity}
         </span>
         <button
+        
           onClick={() => setQuantity(quantity > 9 ? quantity : quantity + 1)}
           className="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer"
         >

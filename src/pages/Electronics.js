@@ -33,9 +33,9 @@ export default function Electronics() {
       <h1 className="text-md sm:text-3xl mx-10 text-center text-custom1 font-semibold my-4 ">
         Electronics
       </h1>
-      <div className="container  mx-auto p-10 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  gap-10 object-fill">
+      <div className="container  mx-auto px-4 grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-10 object-fill">
         {products.map((product) => {
-          return <ProductCard product={product} />;
+          return <ProductCard product={product} key={product.id} />;
         })}
       </div>
     </Layout>

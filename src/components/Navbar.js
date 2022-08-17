@@ -5,7 +5,6 @@ import { Link, NavLink } from "react-router-dom";
 import { logout } from "../app/slices/authenticationSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "./SearchBar";
-import CartPage from "./CartPage";
 
 export default function Navbar() {
   function classNames(...classes) {
@@ -163,7 +162,7 @@ export default function Navbar() {
 
               <div className="text-my block sm:hidden mx-2 mt-4">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-custom3   hover:text-white hover:bg-custom4 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-custom3 hover:text-custom4">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -192,8 +191,8 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-
-          <Disclosure.Panel className="bg-slate-50 rounded-lg">
+          {/* mobile size navbar links panel */}
+          <Disclosure.Panel className="bg-slate-50 ">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <NavLink
@@ -201,8 +200,8 @@ export default function Navbar() {
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "bg-custom3  text-white  block px-3 py-2 rounded-md text-base font-medium "
-                      : "  text-custom3    hover:bg-custom4  hover:text-slate-50 block px-3 py-2 rounded-md text-base font-medium "
+                      ? " active-nav block px-3 py-2  text-base font-medium "
+                      : " navlink  block px-3 py-2 text-base font-medium "
                   }
                   aria-current={item.current ? "page" : undefined}
                 >

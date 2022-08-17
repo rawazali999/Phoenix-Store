@@ -1,11 +1,12 @@
 import React from "react";
 import CartQuantity from "./CartQuantity";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { Button } from "@mui/material";
 
 function CartPage() {
   return (
     <>
-      <div className="flex md:flex-row flex-col justify-end" id="cart">
+      <div className="flex md:flex-row flex-col justify-end">
         <div
           className=" w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white overflow-y-auto overflow-x-hidden h-screen"
           id="scroll"
@@ -23,7 +24,7 @@ function CartPage() {
             </div>
             <div className=" mx-2 container flex justify-between col-span-3">
               <div className="mx-2">
-                <p className="text-3xl my-4 font-black leading-none text-gray-800">
+                <p className="text-sm sm:text-3xl my-4 font-black leading-none text-gray-800">
                   North wolf bag
                 </p>
 
@@ -37,10 +38,15 @@ function CartPage() {
                   Category: men
                 </p>
 
-                <button className="mt-20 text-red-500 border  border-red-500 w-24 rounded-md ">
-                  <DeleteOutlineIcon sx={{ fill: "red" }} />
-                  remove
-                </button>
+                <div className="mt-20">
+                  <Button
+                    variant="outlined"
+                    color="error"
+                    startIcon={<DeleteOutlineIcon />}
+                  >
+                    remove
+                  </Button>
+                </div>
               </div>
               <div className="h-full flex flex-col justify-between">
                 <div>
@@ -88,7 +94,7 @@ function CartPage() {
                   $10,240
                 </p>
               </div>
-              <button className="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
+              <button className="text-xl rounded-md leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white">
                 Checkout
               </button>
             </div>

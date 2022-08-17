@@ -6,7 +6,7 @@ import AddToFav from "./AddToFav";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="max-w-xs mx-auto overflow-hidden  border-custom1 bg-white rounded-2xl shadow-2xl">
+    <div className="max-w-xs mx-auto overflow-hidden border bg-white rounded-2xl shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-2xl font-bold text-gray-800 uppercase">
@@ -34,7 +34,7 @@ export default function ProductCard({ product }) {
           </label>
         </div>
       </Link>
-      <div className="flex items-center justify-between px-4 py-2 bg-gray-800">
+      <div className="flex items-center justify-between  px-4 py-2 bg-gray-800">
         <h1 className="text-lg font-bold text-white">{product.price} $</h1>
         <AddToFav />
       </div>
