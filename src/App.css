@@ -13,7 +13,7 @@
   background-image: url('./images/happy\ shopping\ light\ spot\ poster_1035507.jpg'); 
   background-position: center;
   background-repeat: no-repeat ;
-  background-size: contain;
+  background-size: cover;
   background-position:initial;
   position: absolute;
 }

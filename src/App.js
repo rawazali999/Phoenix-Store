@@ -2,10 +2,10 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 
-import Login from './pages/Login';
-import Register from './pages/Signup';
-import Products from './pages/Products';
-import Product from './pages/Product';
+import Login from "./pages/Login";
+import Register from "./pages/Signup";
+import Products from "./pages/Products";
+import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Electronics from "./pages/Electronics";
 import ContactUs from "./pages/ContactUs";
@@ -17,22 +17,19 @@ import Women from "./pages/Women";
 function App() {
   return (
     <div className="font-poppins">
-     
       <Routes>
         <Route path="/" element={<Home />} />
-  
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="products" element={<Products />} />
-        <Route path="men" element={<Men/>} />
+        <Route path="men" element={<Men />} />
         <Route path="women" element={<Women />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="cart" element={<Cart />} />
         <Route path="electronics" element={<Electronics />} />
         <Route path="ContactUs" element={<ContactUs />} />
         <Route path="signup" element={<Signup />} />
-        <Route path="*" element={<NotFound404Page/>} />
-
+        <Route path="*" element={<NotFound404Page />} />
       </Routes>
     </div>
   );

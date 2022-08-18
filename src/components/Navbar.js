@@ -98,7 +98,7 @@ export default function Navbar() {
                         <Menu.Item>
                           {({ active }) => (
                             <Link
-                              to="/login"
+                              to={"/login"}
                               onClick={() => dispatch(logout())}
                               className={classNames(
                                 active ? "bg-gray-100" : "",
