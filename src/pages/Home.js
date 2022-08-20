@@ -1,7 +1,7 @@
 import React from "react";
 import HeroSection from "../components/HeroSection";
-import HomeCarousel from "../components/HomeCarousel";
 import MainServices from "../components/MainServices";
+import Carousel from "../components/Carousel";
 import Layout from "../Layouts/MainLayout";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Layout>
         <HeroSection />
         <MainServices />
-        <HomeCarousel />
+        <Carousel/>
       </Layout>
     </>
   );

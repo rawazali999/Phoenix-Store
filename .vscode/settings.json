@@ -20,5 +20,11 @@
     "commandCenter.border": "#e7e7e799"
   },
   "peacock.color": "00386a",
-  "cSpell.words": ["headlessui", "heroicons", "reduxjs"]
+  "cSpell.words": [
+    "headlessui",
+    "heroicons",
+    "navlink",
+    "reduxjs",
+    "swipeable"
+  ]
 }

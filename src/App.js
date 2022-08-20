@@ -16,7 +16,7 @@ import Women from "./pages/Women";
 
 function App() {
   return (
-    <div className="font-poppins">
+    <div className="font-lato ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />

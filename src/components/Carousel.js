@@ -1,52 +1,35 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import { Link } from "react-router-dom";
-
 import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-export default function HomeCarousel() {
-  const responsive = {
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-      slidesToSlide: 1, // optional, default to 1.
-    },
-  };
+export default function NewCarousel() {
   return (
     <>
       <h1 className="flex items-center justify-center text-3xl py-4 text-custom1">
         Our Product categories
       </h1>
       <Carousel
-        containerClass=" w-3/5  mx-auto carousel-container"
         swipeable={true}
-        showDots={false}
-        draggable={true}
-        responsive={responsive}
-        minimumTouchDrag={30}
-        infinite={true}
         autoPlay={true}
-        autoPlaySpeed={3000}
-        customTransition="fade .5"
-        transitionDuration={500}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        dotListClass="custom-dot-list-style"
+        emulateTouch={true}
+        infiniteLoop={true}
+        showThumbs={false}
+        interval={2000}
+        useKeyboardArrows={true}
+        stopOnHover={true}
+        autoFocus={true}
+        showArrows={false}
+        className=" w-5/6 sm:w-3/5 mx-auto"
       >
         {/* first slide */}
-        <Link to={"/men"} className="grid-cols-3 gap-1 grid">
-          <p className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2">
+        <div className="grid-cols-3 gap-1 grid">
+          <Link
+            to={"/men"}
+            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+          >
             Men Clothes
-          </p>
+          </Link>
           <div className="  my-3 ">
             <img
               className="rounded-t-md"
@@ -75,12 +58,15 @@ export default function HomeCarousel() {
               alt="navy two quarters"
             />
           </div>
-        </Link>
+        </div>
         {/* second slide*/}
-        <Link to={"/women"} className="grid-cols-3 gap-1 grid rounded-md">
-          <p className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2">
+        <div className="grid-cols-3 gap-1 grid rounded-md">
+          <Link
+            to={"/women"}
+            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+          >
             Women Clothes
-          </p>
+          </Link>
 
           <div>
             <img
@@ -113,12 +99,15 @@ export default function HomeCarousel() {
               alt="3 girls"
             />
           </div>
-        </Link>
+        </div>
         {/* third slide*/}
-        <Link to={"/electronics"} className="grid-cols-3 gap-1 grid rounded-md">
-          <p className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2">
+        <div className="grid-cols-3 gap-1 grid rounded-md">
+          <Link
+            to={"/electronics"}
+            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+          >
             Electronics
-          </p>
+          </Link>
 
           <div>
             <img
@@ -151,7 +140,7 @@ export default function HomeCarousel() {
               alt="apple products"
             />
           </div>
-        </Link>
+        </div>
       </Carousel>
     </>
   );

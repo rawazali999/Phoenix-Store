@@ -119,7 +119,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="my-3 text-custom3 sm:mr-8 mr-2 lg:inline-block hover:text-white p-2.5  mb-1 flex  rounded-full hover:bg-custom4"
+                  className="my-4 navlink  mr-2 lg:inline-block text-custom1 p-2.5  mb-1 flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -140,13 +140,13 @@ export default function Navbar() {
 
               {/* cart button */}
 
-              <Link to="/cart">
-                <span className="bg-custom2 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
+              <Link to="/cart" className="navlink px-2">
+                <span className="bg-custom1 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
                   5
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 sm:w-7 sm:h-7 hover:text-custom4 text-custom3 "
+                  className="h-6 w-6 sm:w-7 sm:h-7  text-custom1"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
