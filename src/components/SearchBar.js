@@ -24,7 +24,7 @@ export default function SearchBar() {
           <input
             type="search"
             id="default-search"
-            className="block  p-2  w-full text-sm text-navy bg-white rounded-r-lg border-2 border-gray-300 focus:border-amber-400 focus:outline-none "
+            className="block  p-2  w-full text-sm text-navy bg-white rounded-r-lg border-2 border-gray-300 focus:border-custom4 focus:outline-none "
             placeholder="Search..."
             required
           />

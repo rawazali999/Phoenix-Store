@@ -2,6 +2,7 @@ import React from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -28,7 +29,7 @@ export default function Footer() {
             >
               <img
                 className="mx-1 w-12 h-auto sm:w-16  "
-                src={require("../images/phoenix-logo-free-download-141875.png")}
+                src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
               <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
@@ -52,31 +53,31 @@ export default function Footer() {
           </div>
           {/* categories links */}
           <div className="my-2 px-2">
-            <p className="font-semibold tracking-wide ">Category</p>
+            <p className="font-semibold text-white ">Category</p>
             <ul className="mt-2 space-y-2">
               <li>
-                <a
-                  href="/"
+                <Link
+                  to="/men"
                   className="transition-colors duration-300 text-custom1 hover:text-custom5"
                 >
                   Men
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to={"/women"}
                   className="transition-colors duration-300 text-custom1 hover:text-custom5"
                 >
                   Women
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
+                <Link
+                  to={"/electronics"}
                   className="transition-colors duration-300 text-custom1 hover:text-custom5"
                 >
                   Electronics
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -90,7 +91,7 @@ export default function Footer() {
           </div>
           {/* some other links */}
           <div className="my-2 px-4 ">
-            <p className="font-semibold tracking-wide text-custom1">Cherry</p>
+            <p className="font-semibold tracking-wide text-white">Cherry</p>
             <ul className="mt-2 space-y-2">
               <li>
                 <a
@@ -136,7 +137,7 @@ export default function Footer() {
           </div>
           {/* email input with button for sub */}
           <div className="md:max-w-md px-2 sm:px-10 col-span-2">
-            <span className="text-base font-medium tracking-wide text-white">
+            <span className="text-base font-semibold tracking-wide text-white">
               Subscribe for updates
             </span>
             <form className="flex flex-col mt-4 md:flex-row">
@@ -144,16 +145,16 @@ export default function Footer() {
                 placeholder="Email"
                 required
                 type="text"
-                className="flex-grow w-56 h-12 px-4 mb-3 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none md:mr-2 md:mb-0 focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                className="flex-grow w-56 h-12 px-4 mb-3 transition duration-200 bg-white border-2  rounded md:rounded-r-none shadow-sm appearance-none md:mb-0 focus:border-custom1 focus:outline-none focus:shadow-outline"
               />
               <button
                 type="submit"
-                className="inline-flex w-28 items-center justify-center h-12 px-4 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-custom1 hover:bg-custom5 focus:shadow-outline focus:outline-none"
+                className=" w-28  h-12 px-2 py-3 font-medium tracking-wide text-white transition duration-200 rounded md:rounded-l-none shadow-md bg-custom1 hover:bg-custom5 focus:shadow-outline focus:outline-none"
               >
                 Subscribe
               </button>
             </form>
-            <p className="mt-4 text-sm text-gray-500">
+            <p className="mt-4 text-sm text-gray-100">
               get information about latest news , offers, discounts...
             </p>
           </div>

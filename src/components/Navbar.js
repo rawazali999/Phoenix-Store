@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import { logout } from "../app/slices/authenticationSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "./SearchBar";
+import ThemeToggle from "./Theme/ThemeToggle";
 
 export default function Navbar() {
   function classNames(...classes) {
@@ -25,7 +26,7 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col bg-white  md:px-4 px-1 border-solid shadow-sm border-b-2 sm:pb-2 ">
+        <div className="flex flex-col bg-gray-50  md:px-4 px-1 border-solid shadow-sm border-b-2 sm:pb-2 ">
           {/* first row  */}
 
           <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-2 ">
@@ -33,20 +34,24 @@ export default function Navbar() {
             <div className="flex items-start flex-shrink text-custom3  mt-4 mb-0">
               <img
                 className="mx-1 w-12 h-auto sm:w-16  "
-                src={require("../images/phoenix-logo-free-download-141875.png")}
+                src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-semibold text-custom2 text-md mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-semibold text-custom5 text-md mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix Store
               </span>
+              
             </div>
 
             {/* search bar */}
             <div className="relative hidden sm:flex flex-shrink text-gray-600 mt-8 md:mr-10 mr-0  w-auto ">
               <SearchBar />
             </div>
+            
             {/* Login and Cart buttons*/}
             <div className="mt-3 text-md font-bold flex justify-between sm:mx-2 mx-0">
+            <ThemeToggle />
+
               {auth.isAuthenticated ? (
                 <>
                   <Menu as="div" className="mt-5 sm:w-10 w-8  text-pallete1">
@@ -141,7 +146,7 @@ export default function Navbar() {
               {/* cart button */}
 
               <Link to="/cart" className="navlink px-2">
-                <span className="bg-custom1 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
+                <span className="bg-red-500 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
                   5
                 </span>
                 <svg
@@ -174,7 +179,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* second row */}
-          <div className=" w-full hidden sm:flex items-center justify-center px-8">
+          <div className=" w-full hidden sm:flex items-center justify-around px-8">
             <div className="text-sm sm:text-md font-bold flex justify-around">
               {navigation.map((item) => (
                 <NavLink

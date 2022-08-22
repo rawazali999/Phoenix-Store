@@ -18,7 +18,6 @@ export default function NewCarousel() {
         interval={2000}
         useKeyboardArrows={true}
         stopOnHover={true}
-        autoFocus={true}
         showArrows={false}
         className=" w-5/6 sm:w-3/5 mx-auto"
       >
