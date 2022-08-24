@@ -2,7 +2,7 @@
 
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
@@ -17,6 +17,9 @@ module.exports = {
         custom3: "#00D7FF",
         custom4: "#61C0BF",
         custom5: "#0096FF",
+        dark1: "#022C43",         
+        darkFrom: "#1E3B70",             
+        darkTo: "#29539B ",         
       },
     },
 

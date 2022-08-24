@@ -22,11 +22,11 @@ export default function Navbar() {
     { name: "Electronics", href: "/electronics", current: false },
     { name: "Contact Us", href: "/ContactUs", current: false },
   ];
-
+//   1E3B70  29539B 
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col bg-gray-50  md:px-4 px-1 border-solid shadow-sm border-b-2 sm:pb-2 ">
+        <div className="flex flex-col  bg-gradient-to-r  from-cyan-500 dark:from-darkFrom  to-blue-500 dark:to-darkTo  md:px-4 px-1 border-b shadow-sm  sm:pb-2 ">
           {/* first row  */}
 
           <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-2 ">
@@ -37,25 +37,24 @@ export default function Navbar() {
                 src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-semibold text-custom5 text-md mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-semibold text-gray-100 text-md mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix Store
               </span>
-              
             </div>
 
             {/* search bar */}
-            <div className="relative hidden sm:flex flex-shrink text-gray-600 mt-8 md:mr-10 mr-0  w-auto ">
+            <div className="relative hidden sm:flex flex-shrink text-gray-600 dark:text-gray-100 mt-8 md:mr-10 mr-0  w-auto ">
               <SearchBar />
             </div>
-            
+
             {/* Login and Cart buttons*/}
             <div className="mt-3 text-md font-bold flex justify-between sm:mx-2 mx-0">
-            <ThemeToggle />
+              <ThemeToggle />
 
               {auth.isAuthenticated ? (
                 <>
                   <Menu as="div" className="mt-5 sm:w-10 w-8  text-pallete1">
-                    <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-amber-500 focus:ring-white">
+                    <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom3 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
@@ -73,13 +72,13 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right text-custom1 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="origin-top-right text-custom1 dark:text-gray-100  absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-100 dark:bg-dark1 ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <a
                               href="#href"
                               className={classNames(
-                                active ? "bg-gray-100" : "",
+                                active ? "bg-gray-100 " : "",
                                 "block px-4 py-2 text-sm"
                               )}
                             >
@@ -117,14 +116,14 @@ export default function Navbar() {
                       </Menu.Items>
                     </Transition>
                   </Menu>
-                  <div className="text-gray-500 mr-4 ml-2 mt-2 text-sm sm:text-lg py-4">
+                  <div className="text-gray-700 dark:text-gray-200 mr-4 ml-2 mt-2 text-sm sm:text-lg py-4">
                     {auth.username}
                   </div>
                 </>
               ) : (
                 <Link
                   to="/login"
-                  className="my-4 navlink  mr-2 lg:inline-block text-custom1 p-2.5  mb-1 flex"
+                  className="my-4 navlink  mr-2 lg:inline-block text-gray-100 p-2.5  mb-1 flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +150,7 @@ export default function Navbar() {
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 sm:w-7 sm:h-7  text-custom1"
+                  className="h-6 w-6 sm:w-7 sm:h-7  text-gray-100 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -167,7 +166,7 @@ export default function Navbar() {
 
               <div className="text-my block sm:hidden mx-2 mt-4">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-custom3 hover:text-custom4">
+                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-custom1 dark:text-gray-100 hover:text-custom5 ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
@@ -187,8 +186,8 @@ export default function Navbar() {
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? " active-nav text-custom1  mt-4 px-3 py-2 mr-2 "
-                      : " text-custom1 navlink mt-4 px-3 py-2 mr-2  "
+                      ? " active-nav  text-gray-100  mt-4 px-3 py-2 mr-2 "
+                      : "navlink  text-gray-100  mt-4 px-3 py-2 mr-2  "
                   }
                 >
                   {item.name}
@@ -197,16 +196,16 @@ export default function Navbar() {
             </div>
           </div>
           {/* mobile size navbar links panel */}
-          <Disclosure.Panel className="bg-slate-50 ">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <Disclosure.Panel >
+            <div className="px-2 pt-2 pb-3 border-b">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? " active-nav block px-3 py-2  text-base font-medium "
-                      : " navlink  block px-3 py-2 text-base font-medium "
+                      ? "text-gray-100 active-nav block px-3 py-2  text-base font-medium "
+                      : " text-gray-100 navlink  block px-3 py-2 text-base font-medium "
                   }
                   aria-current={item.current ? "page" : undefined}
                 >

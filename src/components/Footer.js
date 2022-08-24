@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="relative mt-16 bg-custom4">
-      <svg
+    <div className="relative mt-16 bg-gradient-to-r from-cyan-500 to-blue-500 dark:from-darkFrom dark:bg-darkTo">
+      {/* <svg
         className="absolute top-0 w-full h-6 -mt-3 sm:-mt-10 sm:h-12 text-custom4"
         preserveAspectRatio="none"
         viewBox="0 0 1440 54"
@@ -16,7 +16,7 @@ export default function Footer() {
           fill="currentColor"
           d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
         />
-      </svg>
+      </svg> */}
       <div className="px-4 pt-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 row-gap-10 mb-8 ">
           {/* logo and contact details */}

@@ -12,22 +12,22 @@ export default function MainServices() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  m-auto p-6">
         <div className="flex  flex-col justify-center items-center border-r my-2 py-4 ">
-          <LocalShippingOutlinedIcon fontSize="large"  sx={{ color: "navy",}}  />
+          <LocalShippingOutlinedIcon   sx={{ color: "darkcyan",fontSize: "50px"}}  />
           <p className="text-lg">Free Delivery</p>
           <p className="text-sm text-gray-500">Free Shipping on all order</p>
         </div>
         <div className="flex flex-col justify-center  items-center border-r my-2 py-4 ">
-          <CachedOutlinedIcon fontSize="large" sx={{ color: "navy" }} />
+          <CachedOutlinedIcon  sx={{ color: "darkcyan",fontSize: "50px" }} />
           <p className="text-lg">Return Policy</p>
           <p className="text-sm text-gray-500">Return the Order</p>
         </div>
         <div className="flex  flex-col justify-center items-center border-r my-2 py-4 ">
-          <SupportAgentOutlinedIcon fontSize="large" sx={{ color: "navy" }} />
+          <SupportAgentOutlinedIcon  sx={{ color: "darkcyan",fontSize: "50px" }} />
           <p className="text-lg">24/7 Support</p>
           <p className="text-sm text-gray-500">We all time here for you</p>
         </div>
         <div className="flex flex-col justify-center  items-center py-4  ">
-          <DoneOutlinedIcon fontSize="large" sx={{ color: "navy" }} />
+          <DoneOutlinedIcon  sx={{ color: "darkcyan",fontSize: "50px" }} />
           <p className="text-lg">Product Quality</p>
           <p className="text-sm text-gray-500">we guarantee our quality</p>
         </div>

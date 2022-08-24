@@ -4,7 +4,7 @@ export default function SearchBar() {
     <>
       <select
         id="countries"
-        className="bg-white border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
+        className="dark:bg-inherit dark:text-gray-100 border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
       >
         <option defaultValue={"All"}>All</option>
         <option value="US">Men</option>
@@ -24,7 +24,7 @@ export default function SearchBar() {
           <input
             type="search"
             id="default-search"
-            className="block  p-2  w-full text-sm text-navy bg-white rounded-r-lg border-2 border-gray-300 focus:border-custom4 focus:outline-none "
+            className="block  p-2  w-full text-sm text-navy bg-white dark:bg-inherit rounded-r-lg border-2 border-gray-300 focus:border-custom4 focus:outline-none "
             placeholder="Search..."
             required
           />
@@ -32,7 +32,7 @@ export default function SearchBar() {
           <div className="flex absolute inset-y-0 right-0 items-center pl-3 mx-2 pointer-events-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-gray-500 dark:text-gray-400"
+              className="w-5 h-5 text-gray-500 dark:text-gray-100"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
