@@ -6,8 +6,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 export default function NewCarousel() {
   return (
     <>
-      <h1 className="flex items-center justify-center text-3xl py-4 text-custom1">
-        Our Product categories
+      <h1 className="flex items-center justify-center text-3xl font-bold py-4 text-custom1 dark:text-gray-100">
+        Our Products Categories
       </h1>
       <Carousel
         swipeable={true}
@@ -25,7 +25,7 @@ export default function NewCarousel() {
         <div className="grid-cols-3 gap-1 grid">
           <Link
             to={"/men"}
-            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+            className="col-span-3 text-lg font-lato text-custom1 dark:text-gray-100 hover:text-custom5 dark:hover:text-gray-400 text-center my-2"
           >
             Men Clothes
           </Link>
@@ -62,7 +62,7 @@ export default function NewCarousel() {
         <div className="grid-cols-3 gap-1 grid rounded-md">
           <Link
             to={"/women"}
-            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+            className="col-span-3 text-lg font-lato text-custom1 dark:text-gray-100 hover:text-custom5 dark:hover:text-gray-400 text-center my-2"
           >
             Women Clothes
           </Link>
@@ -103,7 +103,7 @@ export default function NewCarousel() {
         <div className="grid-cols-3 gap-1 grid rounded-md">
           <Link
             to={"/electronics"}
-            className="col-span-3 text-lg font-lato text-custom1 hover:text-custom6 text-center my-2"
+            className="col-span-3 text-lg font-lato text-custom1 dark:text-gray-100 hover:text-custom5 dark:hover:text-gray-400 text-center my-2"
           >
             Electronics
           </Link>

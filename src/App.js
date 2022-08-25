@@ -14,10 +14,9 @@ import NotFound404Page from "./pages/NotFound404Page";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
 
-
 function App() {
   return (
-    <div className="font-lato ">
+    <div className="font-lato bg-gradient-to-r dark:from-darkFrom dark:to-darkTo ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />

@@ -2,6 +2,7 @@ import React from "react";
 export default function SearchBar() {
   return (
     <>
+    
       <select
         id="countries"
         className="dark:bg-inherit dark:text-gray-100 border-2 border-r-0 text-center border-gray-300 text-sm rounded-l-lg focus:ring-custom4 focus:border-custom4 focus:outline-none w-auto h-10"
@@ -14,12 +15,7 @@ export default function SearchBar() {
       </select>
 
       <form>
-        <label
-          htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
-        >
-          Search
-        </label>
+       
         <div className="relative">
           <input
             type="search"

@@ -1,8 +1,9 @@
 import React from "react";
 import { ThemeContext } from "./themeContext";
+import { useContext } from "react";
 
 const ThemeToggle = () => {
-  const { theme, setTheme } = React.useContext(ThemeContext);
+  const { theme, setTheme } = useContext(ThemeContext);
 
   return (
     <div className="mt-5 mx-1">

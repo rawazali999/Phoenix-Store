@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: "Electronics", href: "/electronics", current: false },
     { name: "Contact Us", href: "/ContactUs", current: false },
   ];
-//   1E3B70  29539B 
+  //   1E3B70  29539B
   return (
     <Disclosure as="nav">
       {({ open }) => (
@@ -196,15 +196,19 @@ export default function Navbar() {
             </div>
           </div>
           {/* mobile size navbar links panel */}
-          <Disclosure.Panel >
-            <div className="px-2 pt-2 pb-3 border-b">
+          <Disclosure.Panel>
+            <div className="grid grid-cols-3 px-2 pt-2 pb-3 border-b sm:hidden">
+              <div className="col-span-3 relative flex justify-center text-gray-600 dark:text-gray-100 my-2  w-auto ">
+                <SearchBar />
+              </div>
+
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? "text-gray-100 active-nav block px-3 py-2  text-base font-medium "
+                      ? "text-gray-100 active-nav block px-6 py-2  text-base font-medium "
                       : " text-gray-100 navlink  block px-3 py-2 text-base font-medium "
                   }
                   aria-current={item.current ? "page" : undefined}
