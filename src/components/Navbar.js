@@ -22,7 +22,7 @@ export default function Navbar() {
     { name: "Electronics", href: "/electronics", current: false },
     { name: "Contact Us", href: "/ContactUs", current: false },
   ];
-  //   1E3B70  29539B
+
   return (
     <Disclosure as="nav">
       {({ open }) => (
