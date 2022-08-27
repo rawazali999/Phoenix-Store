@@ -12,6 +12,16 @@ export default function Navbar() {
     return classes.filter(Boolean).join(" ");
   }
   const auth = useSelector((state) => state.auth);
+
+  const cart = useSelector((state) => state.cart.cart);
+  const getTotalQuantity = () => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
+
   const dispatch = useDispatch();
 
   const navigation = [
@@ -145,9 +155,13 @@ export default function Navbar() {
               {/* cart button */}
 
               <Link to="/cart" className="navlink px-2">
-                <span className="bg-red-500 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
-                  5
-                </span>
+                {getTotalQuantity() > 0 ? (
+                  <span className="bg-red-500 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
+                    {getTotalQuantity() || 0}
+                  </span>
+                ) : (
+                  <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
+                )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6 sm:w-7 sm:h-7  text-gray-100 "

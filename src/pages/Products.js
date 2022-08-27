@@ -7,7 +7,7 @@ import Spinner from "../components/Spinner";
 export default function Products() {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState();
-
+  
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")

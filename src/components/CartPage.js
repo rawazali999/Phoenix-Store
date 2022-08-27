@@ -1,10 +1,10 @@
 import React from "react";
-import CartQuantity from "./CartQuantity";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 
 function CartPage() {
-  const quantity = useSelector((state) => state.quantity);
+  const cart = useSelector((state) => state.cart.cart);
+  console.log(cart);
 
   return (
     <>
@@ -13,46 +13,16 @@ function CartPage() {
           <p className="text-5xl font-black leading-10 text-gray-800 dark:text-gray-100 pt-3">
             Shopping Cart
           </p>
-          <div className="mt-14 py-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-4">
-            <img
-              src="https://cdn.tuk.dev/assets/templates/e-commerce-kit/bestSeller3.png"
-              alt="l"
-              className="col object-center rounded object-contain"
+          {cart?.map((item) => (
+            <CartItem
+              key={item.id}
+              id={item.id}
+              image={item.image}
+              title={item.title}
+              price={item.price}
+              quantity={item.quantity}
             />
-
-            <div className=" mx-2 container flex justify-between col-span-3">
-              <div className="mx-2 text-gray-700 dark:text-gray-100 ">
-                <p className="text-sm sm:text-3xl my-4 font-black leading-none ">
-                  North wolf bag
-                </p>
-
-                <p className="text-sm leading-3  py-2">Color: Black</p>
-                <p className="text-sm leading-3  py-2">Size: small</p>
-                <p className="text-sm leading-3  py-2">Category: men</p>
-
-                <button className="mt-14 border-2 dark:bg-inherit dark:border-white border-red-500 text-red-500 dark:text-white px-2 py-1 rounded-md ">
-                  <DeleteOutlineIcon />
-                  Remove
-                </button>
-              </div>
-              <div className="h-full flex flex-col justify-between">
-                <div>
-                  <label
-                    htmlFor="custom-input-number"
-                    className="w-full  text-gray-900 dark:text-gray-100 text-md font-semibold px-4"
-                  >
-                    Quantity
-                  </label>
-                  <CartQuantity className="py-2 px-1 border border-gray-200 focus:outline-none" />
-                </div>
-
-                <div className="text-2xl ml-6 mb-2 font-black leading-none text-gray-800 dark:text-white ">
-                  {quantity.quantity * 50}$
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr />
+          ))}
         </div>
 
         <div className="xl:w-1/2 md:w-1/3 w-full bg-gray-100 dark:bg-inherit dark:border-2  h-full">
