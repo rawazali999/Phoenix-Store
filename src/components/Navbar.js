@@ -47,8 +47,9 @@ export default function Navbar() {
                 src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-semibold text-gray-100 text-md mt-4 lg:text-3xl sm:text-xl  ">
-                Phoenix Store
+              <span className="font-semibold text-gray-100 text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
+                Phoenix <br className="sm:hidden" />
+                Store
               </span>
             </div>
 

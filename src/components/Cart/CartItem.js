@@ -2,14 +2,23 @@ import React from "react";
 import CartQuantity from "./CartQuantity";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useDispatch } from "react-redux";
-import { removeItem } from "../app/slices/cartSlice";
+import { removeItem } from "../../app/slices/cartSlice";
 
-export default function CartItem({ id, image, title, price, quantity = 0 }) {
+export default function CartItem({
+  id,
+  image,
+  title,
+  price,
+  category,
+  quantity = 0,
+}) {
   const dispatch = useDispatch();
+
+  const total = price * quantity;
 
   return (
     <>
-      <div className="mt-14 py-8 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-4">
+      <div className="mt-14 pt-4 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-4">
         <img
           src={image}
           alt="l"
@@ -24,7 +33,7 @@ export default function CartItem({ id, image, title, price, quantity = 0 }) {
 
             <p className="text-sm leading-3  py-2">Color: Black</p>
             <p className="text-sm leading-3  py-2">Size: small</p>
-            <p className="text-sm leading-3  py-2">Category: men</p>
+            <p className="text-sm leading-3  py-2">Category: {category}</p>
 
             <button
               onClick={() => dispatch(removeItem(id))}
@@ -50,12 +59,11 @@ export default function CartItem({ id, image, title, price, quantity = 0 }) {
             </div>
 
             <div className="text-2xl ml-6 mb-2 font-black leading-none text-gray-800 dark:text-white ">
-              {quantity * price}$
+              {total.toFixed(2)}$
             </div>
           </div>
         </div>
       </div>
-      <hr />
     </>
   );
 }

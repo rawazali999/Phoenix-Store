@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-import { delimiter } from "../utilities/delimiter";
+import { delimiter } from "../../utilities/delimiter";
 import AddToFav from "./AddToFav";
 
 export default function ProductCard({ product }) {
   return (
-    <div  className="max-w-xs mx-auto overflow-hidden border bg-white rounded-2xl shadow-2xl">
+    <div  className="max-w-xs mx-auto overflow-hidden border-2 dark:border-gray-50  bg-white dark:bg-slate-900 rounded-2xl shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
-          <h1 className="text-2xl font-bold text-gray-800 uppercase">
+          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 uppercase">
             {delimiter(product.title, 20)}
           </h1>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
             {delimiter(product.description, 50)}
           </p>
         </div>
@@ -29,12 +29,12 @@ export default function ProductCard({ product }) {
             precision={0.1}
             readOnly
           />
-          <label className="px-2 py-1 text-xs font-semibold text-custom1 uppercase">
+          <label className="px-2 py-1 text-xs font-semibold text-custom1 dark:text-gray-100 uppercase">
             {product.category}
           </label>
         </div>
       </Link>
-      <div className="flex items-center justify-between  px-4 py-2 bg-gray-800">
+      <div className="flex items-center justify-between  px-4 py-2 bg-gray-900 dark:bg-gray-700">
         <h1 className="text-lg font-bold text-white">{product.price} $</h1>
         <AddToFav />
       </div>

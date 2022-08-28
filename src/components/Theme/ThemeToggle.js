@@ -6,11 +6,11 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className="mt-5 mx-1">
+    <div className="mt-4 sm:mt-5  mx-1">
       {theme === "dark" ? (
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className=" text-gray-100 shadow-none p-2 focus:outline-none text-lg rounded-full outline-none ring-transparent cursor-pointer"
+          className=" text-gray-100  shadow-none p-2 focus:outline-none text-lg rounded-full outline-none ring-transparent cursor-pointer"
         >
           <svg
             className="w-6 h-6"

@@ -3,7 +3,7 @@ import Rating from "@mui/material/Rating";
 import AddToFav from "./AddToFav";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../app/slices/cartSlice";
+import { addToCart } from "../../app/slices/cartSlice";
 
 export default function ProductPage({ product }) {
   const dispatch = useDispatch();
@@ -121,6 +121,7 @@ export default function ProductPage({ product }) {
                         title: product.title,
                         price: product.price,
                         image: product.image,
+                        category: product.category,
                       })
                     )
                   }

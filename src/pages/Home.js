@@ -1,7 +1,7 @@
 import React from "react";
-import HeroSection from "../components/HeroSection";
-import MainServices from "../components/MainServices";
-import Carousel from "../components/Carousel";
+import HeroSection from "../components/Home/HeroSection";
+import MainServices from "../components/Home/MainServices";
+import Carousel from "../components/Home/Carousel";
 import Layout from "../Layouts/MainLayout";
 
 export default function Home() {

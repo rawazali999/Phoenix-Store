@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../Layouts/MainLayout";
-import ProductPage from "../components/ProductPage";
+import ProductPage from "../components/Product/ProductPage";
 import { useParams } from "react-router-dom";
 
 export default function Product() {

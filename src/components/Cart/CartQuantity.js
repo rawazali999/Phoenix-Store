@@ -1,6 +1,6 @@
 import { React } from "react";
 import { useDispatch } from "react-redux";
-import { decrementQuantity, incrementQuantity } from "../app/slices/cartSlice";
+import { decrementQuantity, incrementQuantity } from "../../app/slices/cartSlice";
 
 export default function CartQuantity(props) {
   const dispatch = useDispatch();
