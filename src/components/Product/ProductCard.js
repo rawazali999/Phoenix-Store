@@ -6,7 +6,7 @@ import AddToFav from "./AddToFav";
 
 export default function ProductCard({ product }) {
   return (
-    <div  className="max-w-xs mx-auto overflow-hidden border-2 dark:border-gray-50  bg-white dark:bg-slate-900 rounded-2xl shadow-2xl">
+    <div className="max-w-xs mx-auto overflow-hidden border-2 dark:border-gray-50  bg-white dark:bg-slate-900 rounded-2xl shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 uppercase">
