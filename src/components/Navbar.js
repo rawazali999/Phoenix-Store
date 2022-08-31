@@ -8,12 +8,10 @@ import SearchBar from "./SearchBar";
 import ThemeToggle from "./Theme/ThemeToggle";
 
 export default function Navbar() {
-  function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
   const auth = useSelector((state) => state.auth);
 
   const cart = useSelector((state) => state.cart.cart);
+  // total cart items
   const getTotalQuantity = () => {
     let total = 0;
     cart.forEach((item) => {
@@ -39,15 +37,15 @@ export default function Navbar() {
         <div className="flex flex-col  bg-gradient-to-r  from-cyan-500 dark:from-darkFrom  to-blue-500 dark:to-darkTo  md:px-4 px-1 border-b shadow-sm  sm:pb-2 ">
           {/* first row  */}
 
-          <div className="flex justify-between flex-shrink  lg:w-auto w-full  sm:pb-2 ">
+          <div className="flex justify-between flex-shrink w-full  sm:pb-2 ">
             {/* name and logo */}
-            <div className="flex items-start flex-shrink text-custom3  mt-4 mb-0">
+            <div className="flex items-start flex-shrink text-custom3  mt-4 ">
               <img
-                className="mx-1 w-12 h-auto sm:w-16  "
+                className="mx-0.5 w-12 h-auto sm:w-16  "
                 src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-semibold text-gray-100 text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-medium text-white text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix <br className="sm:hidden" />
                 Store
               </span>
@@ -59,12 +57,12 @@ export default function Navbar() {
             </div>
 
             {/* Login and Cart buttons*/}
-            <div className="mt-3 text-md font-bold flex justify-between sm:mx-2 mx-0">
+            <div className="mt-3 text-md font-bold flex justify-between">
               <ThemeToggle />
 
               {auth.isAuthenticated ? (
                 <>
-                  <Menu as="div" className="mt-5 sm:w-10 w-8  text-pallete1">
+                  <Menu as="div" className="mt-5 sm:w-10 w-7  text-pallete1">
                     <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom3 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
@@ -83,45 +81,48 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right text-custom1 dark:text-gray-100  absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-gray-100 dark:bg-dark1 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="origin-top-right text-custom1 dark:text-gray-100  absolute right-0 mt-2 w-40 rounded-md shadow-lg py-1 bg-gray-100 dark:bg-dark1 ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
-                            <a
-                              href="#href"
-                              className={classNames(
-                                active ? "bg-gray-100 " : "",
-                                "block px-4 py-2 text-sm"
-                              )}
+                            <NavLink
+                              to="/"
+                              className={({ isActive }) =>
+                                isActive
+                                  ? " block  px-3 py-2  "
+                                  : "block  px-3 py-2  "
+                              }
                             >
                               Your Profile
-                            </a>
+                            </NavLink>
                           )}
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
-                            <a
-                              href="#href"
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm "
-                              )}
+                            <NavLink
+                              to="/"
+                              className={({ isActive }) =>
+                                isActive
+                                  ? " block  px-3 py-2 "
+                                  : "block  px-3 py-2 "
+                              }
                             >
                               Settings
-                            </a>
+                            </NavLink>
                           )}
                         </Menu.Item>
                         <Menu.Item>
                           {({ active }) => (
-                            <Link
+                            <NavLink
                               to={"/login"}
                               onClick={() => dispatch(logout())}
-                              className={classNames(
-                                active ? "bg-gray-100" : "",
-                                "block px-4 py-2 text-sm"
-                              )}
+                              className={({ isActive }) =>
+                                isActive
+                                  ? " block    px-3 py-2 "
+                                  : "block   px-3 py-2 "
+                              }
                             >
                               Sign out
-                            </Link>
+                            </NavLink>
                           )}
                         </Menu.Item>
                       </Menu.Items>
@@ -134,11 +135,11 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="my-4 navlink  mr-2 lg:inline-block text-gray-100 p-2.5  mb-1 flex"
+                  className="mt-6 navlink  mr-2 lg:inline-block text-gray-100 px-1 mb-1 flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    className="sm:h-7 sm:w-7 w-6 h-6"
+                    className=" sm:w-7 w-5 "
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -165,7 +166,7 @@ export default function Navbar() {
                 )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 sm:w-7 sm:h-7  text-gray-100 "
+                  className="w-5 sm:w-7 text-gray-100 "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -179,30 +180,30 @@ export default function Navbar() {
                 </svg>
               </Link>
 
-              <div className="text-my block sm:hidden mx-2 mt-4">
-                {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-custom1 dark:text-gray-100 hover:text-custom5 ">
+              <div className="text-my block sm:hidden mx-1 mt-4">
+                {/* Mobile size screen menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-gray-100 hover:text-custom5 ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XIcon className="block  w-5" aria-hidden="true" />
                   ) : (
-                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                    <MenuIcon className="block  w-5" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
             </div>
           </div>
-          {/* second row */}
+          {/* second row (navigation links) */}
           <div className=" w-full hidden sm:flex items-center justify-around px-8">
-            <div className="text-sm sm:text-md font-bold flex justify-around">
+            <div className="text-sm sm:text-md text-white font-bold flex justify-around">
               {navigation.map((item) => (
                 <NavLink
                   key={item.name}
                   to={item.href}
                   className={({ isActive }) =>
                     isActive
-                      ? " active-nav  text-gray-100  mt-4 px-3 py-2 mr-2 "
-                      : "navlink  text-gray-100  mt-4 px-3 py-2 mr-2  "
+                      ? " active-nav  mt-4  px-3 py-2 mr-2 "
+                      : "navlink   mt-4  px-3 py-2 mr-2  "
                   }
                 >
                   {item.name}

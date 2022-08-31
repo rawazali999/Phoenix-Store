@@ -75,39 +75,53 @@ export default function Footer() {
               </li>
               <li>
                 <a href="/" className="transition-colors duration-300 ">
-                  Sport
+                  Jewelries
                 </a>
               </li>
             </ul>
           </div>
           {/* some other links */}
           <div className="my-2 px-4 ">
-            <p className="font-semibold tracking-wide text-white">Cherry</p>
+            <p className="font-semibold tracking-wide text-white">Pages</p>
             <ul className="mt-2 space-y-2 text-custom1 dark:text-gray-100 hover:text-custom5">
               <li>
-                <a href="/" className="transition-colors duration-300 ">
-                  Web
-                </a>
+                <Link to="/" className="transition-colors duration-300 ">
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="/" className="transition-colors duration-300 ">
-                  eCommerce
-                </a>
+                <Link
+                  to="/products"
+                  className="transition-colors duration-300 "
+                >
+                  Products
+                </Link>
               </li>
               <li>
-                <a href="/" className="transition-colors duration-300 ">
-                  Business
-                </a>
+                <Link to="/men" className="transition-colors duration-300 ">
+                  Men
+                </Link>
               </li>
               <li>
-                <a href="/" className="transition-colors duration-300 ">
-                  Entertainment
-                </a>
+                <Link to="/women" className="transition-colors duration-300 ">
+                  Women
+                </Link>
               </li>
               <li>
-                <a href="/" className="transition-colors duration-300 ">
-                  Portfolio
-                </a>
+                <Link
+                  to="/electronics"
+                  className="transition-colors duration-300 "
+                >
+                  Electronics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ContactUs"
+                  className="transition-colors duration-300 "
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

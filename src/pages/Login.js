@@ -30,12 +30,12 @@ export default function Login() {
           <div className=" flex flex-col sm:w-full w-4/5 px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
             <div className="text-center my-3 font-bold">
               <h1 className="text-custom2 text-xl">Sign in Phoenix Store</h1>
-              <hr className="sm:mt-6 border-amber-700" />
+              <hr className="mt-2 border-amber-700" />
             </div>
             <form onSubmit={submitHandler}>
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-custom3  text-xs font-bold mb-2"
+                  className="block uppercase text-yellow-700  text-xs font-bold mb-2"
                   htmlFor="username"
                 >
                   Username
@@ -53,7 +53,7 @@ export default function Login() {
 
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-custom3  text-xs font-bold mb-2"
+                  className="block uppercase text-yellow-700  text-xs font-bold mb-2"
                   htmlFor="password"
                 >
                   Password
@@ -73,10 +73,10 @@ export default function Login() {
                   <input
                     id="customCheckLogin"
                     type="checkbox"
-                    className="form-checkbox border-0 rounded text-custom3  ml-1 w-5 h-5"
+                    className="form-checkbox border-0 rounded text-yellow-700  ml-1 w-5 h-5"
                     style={{ transition: "all .15s ease" }}
                   />
-                  <span className="ml-2 text-sm font-semibold text-custom3">
+                  <span className="ml-2 text-sm font-semibold text-yellow-700">
                     Remember me
                   </span>
                 </label>
@@ -102,7 +102,7 @@ export default function Login() {
 
               <div className="text-center mt-6">
                 <button
-                  className="bg-custom3 text-white active:bg-white active:text-  text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                  className="bg-amber-500 text-white active:bg-white   text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                   type="submit"
                   style={{ transition: "all .15s ease" }}
                 >
@@ -116,7 +116,7 @@ export default function Login() {
                   Or Sign in with
                 </h6>
               </div>
-              <div className="text-center grid grid-cols-1 sm:grid-cols-2 ">
+              <div className="text-center sm:grid grid-cols-1 sm:grid-cols-2  ">
                 <button
                   className="bg-white active:bg-gray-100 text-gray-800 p-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
                   type="button"

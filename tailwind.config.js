@@ -16,10 +16,11 @@ module.exports = {
         custom2: "#D61C4E",
         custom3: "#00D7FF",
         custom4: "#61C0BF",
-        custom5: "#0096FF",
+        
+        custom5: "#fff",
         dark1: "#022C43",
-        darkFrom: "#000046",
-        darkTo: "#004e92 ",
+        darkFrom: "#001233",
+        darkTo: "#00296b",
       },
     },
 

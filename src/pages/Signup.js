@@ -29,13 +29,13 @@ export default function Signup() {
         <div className="flex items-center justify-center mt-12 h-full">
           <div className=" flex flex-col sm:w-full w-4/5 px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
             <div className="text-center my-3 font-bold">
-              <h1 className="text-custom2 text-xl">Sign up Phoenix Store</h1>
+              <h1 className="text-cyan-800 text-xl">Sign up Phoenix Store</h1>
               <hr className="sm:mt-2 border-amber-700" />
             </div>
             <form onSubmit={submitHandler}>
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-custom5  text-xs font-bold mb-1"
+                  className="block uppercase text-cyan-600  text-xs font-bold mb-1"
                   htmlFor="username"
                 >
                   Username
@@ -52,7 +52,7 @@ export default function Signup() {
               </div>
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-custom5  text-xs font-bold mb-1"
+                  className="block uppercase text-cyan-600  text-xs font-bold mb-1"
                   htmlFor="username"
                 >
                   Email
@@ -69,7 +69,7 @@ export default function Signup() {
 
               <div className="relative w-full mb-3">
                 <label
-                  className="block uppercase text-custom5  text-xs font-bold mb-1"
+                  className="block uppercase text-cyan-600  text-xs font-bold mb-1"
                   htmlFor="password"
                 >
                   Password
@@ -89,10 +89,10 @@ export default function Signup() {
                   <input
                     id="customCheckLogin"
                     type="checkbox"
-                    className="form-checkbox border-0 rounded text-custom5  ml-1 w-5 h-5"
+                    className="form-checkbox border-0 rounded text-cyan-600  ml-1 w-5 h-5"
                     style={{ transition: "all .15s ease" }}
                   />
-                  <span className="ml-2 text-sm font-semibold text-custom5">
+                  <span className="ml-2 text-sm font-semibold text-cyan-600">
                     Remember me
                   </span>
                 </label>
@@ -121,10 +121,10 @@ export default function Signup() {
             <div className="px-6 py-4">
               <div className="text-center mb-3">
                 <h6 className="text-gray-600 text-sm font-bold">
-                  Or Sign in with
+                  Or Sign up with
                 </h6>
               </div>
-              <div className="text-center flex flex-wrap ">
+              <div className="text-center sm:grid grid-cols-1 sm:grid-cols-2">
                 <button
                   className="bg-white active:bg-gray-100 text-gray-800 p-2 rounded-lg outline-none focus:outline-none mr-2 mb-1  shadow hover:shadow-lg inline-flex items-center font-bold text-xs"
                   type="button"
