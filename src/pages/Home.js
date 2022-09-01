@@ -8,9 +8,17 @@ export default function Home() {
   return (
     <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo">
       <Layout>
-        <p className="inline-block w-full mt-10 text-lg sm:text-3xl  text-center font-bold tracking-wider text-custom1 dark:text-gray-100 ">
-          Welcome to Phoenix Store
-        </p>
+        <div className="flex capitalize items-center justify-center text-3xl font-bold pt-10 text-custom1 dark:text-gray-100">
+          <div className="block  text-cyan-800 dark:text-gray-100 -mt-5 mx-2 ">
+            {" "}
+            ______
+          </div>
+          welcome to phoenix store
+          <div className="block text-cyan-800 dark:text-gray-100 -mt-5 mx-2 ">
+            {" "}
+            ______
+          </div>
+        </div>
         <HeroSection />
         <MainServices />
         <Carousel />

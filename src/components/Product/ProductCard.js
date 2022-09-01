@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
 import { delimiter } from "../../utilities/delimiter";
 import AddToFav from "./AddToFav";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../app/slices/cartSlice";
 
 export default function ProductCard({ product }) {
+  const dispatch = useDispatch();
   return (
-    <div className="max-w-xs mx-auto overflow-hidden border-2 dark:border-gray-50  bg-white dark:bg-slate-900 rounded-2xl shadow-2xl">
+    <div className="max-w-xs mx-auto overflow-hidden border-2 border-gray-900 dark:border-gray-50  bg-white dark:bg-slate-900 rounded-xl shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 uppercase">
@@ -35,8 +39,26 @@ export default function ProductCard({ product }) {
         </div>
       </Link>
       <div className="flex items-center justify-between  px-4 py-2 bg-gray-900 dark:bg-gray-700">
-        <h1 className="text-lg font-bold text-white">{product.price} $</h1>
-        <AddToFav />
+        <h1 className="text-xl font-bold text-white">{product.price} $</h1>
+        <div className="flex">
+          <button
+            onClick={() => {
+              dispatch(
+                addToCart({
+                  id: product.id,
+                  title: product.title,
+                  price: product.price,
+                  image: product.image,
+                  category: product.category,
+                })
+              );
+            }}
+            className="flex ml-auto text-white  px-2 "
+          >
+            <ShoppingCartOutlinedIcon className="ml-2" />
+          </button>
+          <AddToFav />
+        </div>
       </div>
     </div>
   );

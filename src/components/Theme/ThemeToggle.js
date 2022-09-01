@@ -11,6 +11,8 @@ const ThemeToggle = () => {
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className=" text-gray-100  shadow-none mx-1 px-2  cursor-pointer"
+          title="Toggle Theme"
+          
         >
           <svg
             className="w-5 sm:w-7"
@@ -31,6 +33,8 @@ const ThemeToggle = () => {
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="text-gray-100 mx-1 px-2  outline-none  cursor-pointer"
+          title="Toggle Theme"
+          area-label="moon"
         >
           <svg
             className="w-5 sm:w-7"

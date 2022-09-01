@@ -45,7 +45,7 @@ export default function Navbar() {
                 src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-medium text-white text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-medium font-Robonto text-white text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix <br className="sm:hidden" />
                 Store
               </span>
@@ -136,6 +136,8 @@ export default function Navbar() {
                 <Link
                   to="/login"
                   className="mt-6 navlink  mr-2 lg:inline-block text-gray-100 px-1 mb-1 flex"
+                  title="Login"
+                  aria-label="Login"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +158,12 @@ export default function Navbar() {
 
               {/* cart button */}
 
-              <Link to="/cart" className="navlink px-2">
+              <Link
+                to="/cart"
+                title="cart"
+                aria-label="cart"
+                className="navlink px-2"
+              >
                 {getTotalQuantity() > 0 ? (
                   <span className="bg-red-500 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
                     {getTotalQuantity() || 0}

@@ -1,12 +1,13 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import AddToFav from "./AddToFav";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { useDispatch } from "react-redux";
-import { addToCart } from "../../app/slices/cartSlice";
+// import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+// import { useDispatch } from "react-redux";
+// import { addToCart } from "../../app/slices/cartSlice";
+import AddToCardButton from "./AddToCardButton";
 
 export default function ProductPage({ product }) {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
     <>
@@ -14,7 +15,7 @@ export default function ProductPage({ product }) {
         <div className="container px-5 py-24 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img
-              alt="ecommerce"
+              alt="product"
               className="w-1/3 h-auto mx-auto object-contain object-center rounded"
               src={product.image}
             />
@@ -113,22 +114,7 @@ export default function ProductPage({ product }) {
                 <span className="title-font font-medium text-2xl text-gray-900 dark:text-white">
                   $ {product.price}
                 </span>
-                <button
-                  onClick={() =>
-                    dispatch(
-                      addToCart({
-                        id: product.id,
-                        title: product.title,
-                        price: product.price,
-                        image: product.image,
-                        category: product.category,
-                      })
-                    )
-                  }
-                  className="flex ml-auto text-white  bg-custom3 dark:bg-inherit border-0 dark:border py-2 px-4 focus:outline-none hover:bg-custom4 rounded"
-                >
-                  Add to Card <ShoppingCartOutlinedIcon className="ml-2" />
-                </button>
+                <AddToCardButton product={product} />
                 <button className="rounded-full w-10 h-10 bg-slate-500 p-0 border-2 inline-flex items-center justify-center ml-4">
                   <AddToFav />
                 </button>

@@ -20,7 +20,7 @@ module.exports = {
         custom5: "#fff",
         dark1: "#022C43",
         darkFrom: "#001233",
-        darkTo: "#00296b",
+        darkTo: "#101828",
       },
     },
 
