@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col  bg-gradient-to-r  from-cyan-500 dark:from-darkFrom  to-blue-500 dark:to-darkTo  md:px-4 px-1 border-b shadow-sm  sm:pb-2 ">
+        <div className="flex flex-col  bg-gradient-to-r  from-cyan-300 dark:from-darkFrom  to-blue-600 dark:to-darkTo  md:px-4 px-1 border-b shadow-sm  sm:pb-2 ">
           {/* first row  */}
 
           <div className="flex justify-between flex-shrink w-full  sm:pb-2 ">

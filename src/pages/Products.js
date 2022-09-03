@@ -54,12 +54,12 @@ export default function Products() {
   }
   return (
     <Layout>
-      <h1 className="text-md sm:text-3xl pt-4 mx-10 text-center text-custom1 dark:text-gray-100 font-semibold mb-4 ">
+      <h1 className="text-md sm:text-3xl my-8 mx-10 text-center text-custom1 dark:text-gray-100 font-semibold ">
         Explore best Products...
       </h1>
 
       <ProductList products={currentItems} />
-      <div className="container mx-auto flex justify-center mb-10">
+      <div className="container mx-auto flex justify-center my-10">
         <ReactPaginate
           breakLabel="..."
           onPageChange={handlePageClick}

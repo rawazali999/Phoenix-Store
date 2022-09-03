@@ -6,17 +6,10 @@ import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 export default function MainServices() {
   return (
     <div className="w-11/12 mx-auto  my-24 ">
-      <div className="flex  items-center justify-center text-3xl font-bold py-2 text-custom1 dark:text-gray-100">
-        <div className="block text-cyan-800 dark:text-gray-100  -mt-5 mx-2 ">
-          {" "}
-          ______
+      <div className="flex capitalize  items-center justify-center text-3xl font-bold mt-10 text-custom1 dark:text-gray-100">
+          <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo capitalize px-4"> why shop with us</div>
         </div>
-        Why Shop With Us
-        <div className="block text-cyan-800 dark:text-gray-100  -mt-5 mx-2 ">
-          {" "}
-          ______
-        </div>
-      </div>
+        <hr className="border-2 rounded-full w-2/5 mx-auto  border-cyan-500 mb-10 -mt-5 " />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4  m-auto p-6">
         <div className="flex  flex-col justify-center items-center text-cyan-800 dark:text-gray-200 border-r my-2 py-4 ">
           <LocalShippingOutlinedIcon

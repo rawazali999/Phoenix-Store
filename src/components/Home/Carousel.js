@@ -6,13 +6,15 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 export default function NewCarousel() {
   return (
     <>
-      <h1 className="flex items-center justify-center text-3xl font-bold py-4 text-custom1 dark:text-gray-100">
-        <div className="block text-cyan-800 dark:text-gray-100  -mt-5 mx-2 "> ______</div>
-        Our Products Categories
-        <div className="block text-cyan-800 dark:text-gray-100  -mt-5 mx-2 "> ______</div>
-      </h1>
+      =
+      <div className="flex capitalize  items-center justify-center text-3xl font-bold mt-10 text-custom1 dark:text-gray-100">
+        <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo px-4">Our Products Categories </div>
+      </div>
+      <hr className="border-2 rounded-full w-2/5 mx-auto  border-cyan-500 mb-10 -mt-5 " />
       <Carousel
         swipeable={true}
+        showStatus={false}
+        showIndicators={false}
         autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
