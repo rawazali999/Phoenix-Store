@@ -16,19 +16,19 @@ export default function HeroSection() {
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg  lg:pr-5">
           
-          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-custom1 dark:text-gray-200 sm:text-4xl sm:leading-none">
+          <h2 className="mb-6 font-poppins text-3xl font-bold  text-custom1 dark:text-gray-200 sm:text-4xl sm:leading-none">
             Anything you Want <br /> We Have it Here ...
           </h2>
           <p className="pr-5 text-base text-custom1 dark:text-gray-300 md:text-lg">
             Our store has best products in each category :
           </p>
           <p className="pr-5 mb-5 text-base text-custom4  md:text-lg">
-            Electronics , Men Clothes , Women Clothes <br /> Sport Clothes
+            Electronics , Men Clothes  <br /> Women Clothes , Sport Clothes
           </p>
           <div className="flex items-center">
             <Link
               to="/products"
-              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-custom1 bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-white bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
             >
               Shop Now <ShoppingBagOutlinedIcon className="ml-2" />
             </Link>

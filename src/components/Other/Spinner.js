@@ -1,6 +1,6 @@
 import { React, useContext } from "react";
 import { FadeLoader } from "react-spinners";
-import { ThemeContext } from "./Theme/themeContext";
+import { ThemeContext } from "../Theme/themeContext";
 
 export default function Spinner() {
   const { theme } = useContext(ThemeContext);

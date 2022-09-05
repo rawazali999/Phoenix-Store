@@ -1,13 +1,9 @@
 import React from "react";
 import Rating from "@mui/material/Rating";
 import AddToFav from "./AddToFav";
-// import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-// import { useDispatch } from "react-redux";
-// import { addToCart } from "../../app/slices/cartSlice";
 import AddToCardButton from "./AddToCardButton";
 
 export default function ProductPage({ product }) {
-  // const dispatch = useDispatch();
 
   return (
     <>
@@ -80,10 +76,28 @@ export default function ProductPage({ product }) {
               </p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
                 <div className="flex">
-                  <span className="mr-3 dark:text-gray-100">Color</span>
-                  <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" />
-                  <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none" />
-                  <button className="border-2 border-gray-300 ml-1 bg-black rounded-full w-6 h-6 focus:outline-none" />
+                  <span className="mr-3 mt-2 dark:text-gray-100">Color</span>
+                  <div className="relative">
+                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                      <option>Black</option>
+                      <option>White</option>
+                      <option>Brown</option>
+                      <option>Navy</option>
+                    </select>
+                    <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600  pointer-events-none flex items-center justify-center">
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        className="w-4 h-4"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3 dark:text-gray-100">Size</span>
@@ -115,7 +129,7 @@ export default function ProductPage({ product }) {
                   $ {product.price}
                 </span>
                 <AddToCardButton product={product} />
-                <button className="rounded-full w-10 h-10 bg-slate-500 p-0 border-2 inline-flex items-center justify-center ml-4">
+                <button className="rounded-full w-10 h-10 bg-custom4 dark:bg-inherit p-0 border-2 inline-flex items-center justify-center ml-4">
                   <AddToFav />
                 </button>
               </div>

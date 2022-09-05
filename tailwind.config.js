@@ -14,8 +14,8 @@ module.exports = {
       colors: {
         custom1: "#001d3d",
         custom2: "#D61C4E",
-        custom3: "#00D7FF",
-        custom4: "#61C0BF",
+        custom3: "#89CFFD",
+        custom4: "#277BC0",
         
         custom5: "#fff",
         dark1: "#022C43",

@@ -28,8 +28,8 @@ export default function Footer() {
               className="inline-flex items-center"
             >
               <img
-                className="mx-1 w-12 h-auto sm:w-16  "
-                src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
+                className="mx-1 w-14 h-auto   "
+                src={require("../../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
               <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">

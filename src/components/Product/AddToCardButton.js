@@ -28,7 +28,7 @@ export default function AddToCardButton({ product }) {
           );
           handleClick(product.id);
         }}
-        className="flex ml-auto text-white  bg-custom3 dark:bg-inherit border-0 dark:border py-2 px-4 focus:outline-none hover:bg-custom4 rounded"
+        className="flex ml-auto text-white  bg-custom4 dark:bg-inherit border-0 dark:border py-2 px-4 focus:outline-none hover:bg-custom3 rounded"
       >
         {buttonText} <ShoppingCartOutlinedIcon className="ml-2" />
       </button>

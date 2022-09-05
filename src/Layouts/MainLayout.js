@@ -1,5 +1,5 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Footer from "../components/Other/Footer";
+import Navbar from "../components/Other/Navbar";
 export default function MainLayout(props) {
   return (
     <>

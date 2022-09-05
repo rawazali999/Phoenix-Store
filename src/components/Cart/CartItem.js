@@ -27,7 +27,7 @@ export default function CartItem({
 
         <div className=" mx-2 container flex justify-between col-span-3">
           <div className="mx-2 text-gray-700 dark:text-gray-100 ">
-            <p className="text-sm sm:text-3xl my-4 font-black leading-none ">
+            <p className="text-sm sm:text-xl my-4 font-black leading-none ">
               {title}
             </p>
 
@@ -40,7 +40,7 @@ export default function CartItem({
               className="mt-14 border-2 dark:bg-inherit dark:border-white border-red-500 text-red-500 dark:text-white px-2 py-1 rounded-md "
             >
               <DeleteOutlineIcon />
-              Remove
+              
             </button>
           </div>
           <div className="h-full flex flex-col justify-between">

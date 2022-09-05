@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "../Layouts/MainLayout";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Other/Spinner";
 import ProductList from "../components/Product/ProductList";
 import ReactPaginate from "react-paginate";
 import { nextButton } from "../components/Product/PaginateButtons";

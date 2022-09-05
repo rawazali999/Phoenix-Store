@@ -13,7 +13,7 @@ export default function ProductCard({ product }) {
     <div className="max-w-xs mx-auto overflow-hidden border-2 border-gray-900 dark:border-gray-50  bg-white dark:bg-slate-900 rounded shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
-          <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 uppercase">
+          <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100 capitalize">
             {delimiter(product.title, 20)}
           </h1>
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">

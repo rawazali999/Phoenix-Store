@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../components/Product/ProductCard";
 import Layout from "../Layouts/MainLayout";
-import Spinner from "../components/Spinner";
+import Spinner from "../components/Other/Spinner";
 
 export default function Electronics() {
   const [isLoading, setIsLoading] = useState(true);

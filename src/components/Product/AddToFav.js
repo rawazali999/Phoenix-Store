@@ -18,7 +18,7 @@ export default function AddToFav() {
     <>
       <Tooltip title={title}>
         <FavoriteIcon
-          style={{ fill: buttonColor, cursor: "pointer" }}
+          style={{ fill: buttonColor, cursor: "pointer", }}
           onClick={changeColor}
         />
       </Tooltip>

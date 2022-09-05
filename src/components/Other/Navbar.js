@@ -2,10 +2,10 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link, NavLink } from "react-router-dom";
-import { logout } from "../app/slices/authenticationSlice";
+import { logout } from "../../app/slices/authenticationSlice";
 import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "./SearchBar";
-import ThemeToggle from "./Theme/ThemeToggle";
+import ThemeToggle from "../Theme/ThemeToggle";
 
 export default function Navbar() {
   const auth = useSelector((state) => state.auth);
@@ -39,13 +39,13 @@ export default function Navbar() {
 
           <div className="flex justify-between flex-shrink w-full  sm:pb-2 ">
             {/* name and logo */}
-            <div className="flex items-start flex-shrink text-custom3  mt-4 ">
+            <div className="flex items-start text-custom3  my-2  sm:mt-4">
               <img
-                className="mx-0.5 w-12 h-auto sm:w-16  "
-                src={require("../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
+                className="mx-0.5 w-14 h-auto"
+                src={require("../../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
                 alt="logo"
               />
-              <span className="font-medium font-Robonto text-white text-md sm:mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-medium font-Robonto text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix <br className="sm:hidden" />
                 Store
               </span>
