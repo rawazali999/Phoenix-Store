@@ -68,8 +68,8 @@ export default function Products() {
           className="flex"
           previousLabel={prevButton}
           nextLabel={nextButton}
-          pageClassName="hidden sm:inline px-4 py-2 mx-1 rounded-md  transition-colors duration-300 transform     text-gray-700 bg-gray-300 dark:bg-gray-100 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200"
-          activeClassName=" hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium     bg-gray-600 text-slate-50 dark:bg-gray-600  border-gray-300 "
+          pageClassName="hidden sm:inline px-4 py-2 mx-1 rounded-md  transition-colors duration-300 transform     text-gray-700  bg-gray-300 hover:bg-blue-500 dark:hover:bg-blue-500 hover:text-white dark:hover:text-gray-200"
+          activeClassName=" hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium     bg-gray-600 text-slate-50 dark:bg-gray-600 border-gray-300 "
           renderOnZeroPageCount={null}
         />
       </div>

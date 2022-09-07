@@ -6,6 +6,7 @@ import AddToFav from "./AddToFav";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../app/slices/cartSlice";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -55,9 +56,11 @@ export default function ProductCard({ product }) {
             }}
             className="flex ml-auto text-white  px-2 "
           >
-            <ShoppingCartOutlinedIcon className="ml-2" />
+            <Tooltip title="Add to cart">
+              <ShoppingCartOutlinedIcon className="ml-2" />
+            </Tooltip>
           </button>
-          <AddToFav />
+          <AddToFav product={product} />
         </div>
       </div>
     </div>

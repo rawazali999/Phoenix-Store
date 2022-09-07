@@ -35,14 +35,6 @@ const cartSlice = createSlice({
       );
       state.cart = removeItem;
     },
-    addedToCart: (state, action) => {
-      const added = state.cart.find((item) => item.id === action.payload.id);
-      if (added) {
-        return true;
-      } else {
-        return false;
-      }
-    },
   },
 });
 

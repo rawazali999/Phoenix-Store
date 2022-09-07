@@ -16,14 +16,14 @@ export default function NewCarousel() {
         swipeable={true}
         showStatus={false}
         showIndicators={false}
-        autoPlay={false}
+        autoPlay={true}
         emulateTouch={true}
         infiniteLoop={true}
         showThumbs={false}
         interval={2000}
         useKeyboardArrows={true}
         stopOnHover={true}
-        showArrows={false}
+        showArrows={true}
         className=" w-5/6 sm:w-3/5 mx-auto h-auto"
       >
         {/* first slide */}

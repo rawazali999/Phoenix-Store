@@ -11,7 +11,7 @@ export default function SearchBar() {
         <option value="US">Men</option>
         <option value="CA">Women</option>
         <option value="FR">Electronics</option>
-        <option value="DE">Sport</option>
+        <option value="DE">Jewelries</option>
       </select>
 
       <form>

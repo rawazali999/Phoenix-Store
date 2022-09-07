@@ -28,7 +28,7 @@ export default function HeroSection() {
           <div className="flex items-center">
             <Link
               to="/products"
-              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-white bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-white dark:text-custom1 bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
             >
               Shop Now <ShoppingBagOutlinedIcon className="ml-2" />
             </Link>

@@ -4,7 +4,6 @@ import AddToFav from "./AddToFav";
 import AddToCardButton from "./AddToCardButton";
 
 export default function ProductPage({ product }) {
-
   return (
     <>
       <section className="body-font overflow-hidden">
@@ -130,7 +129,7 @@ export default function ProductPage({ product }) {
                 </span>
                 <AddToCardButton product={product} />
                 <button className="rounded-full w-10 h-10 bg-custom4 dark:bg-inherit p-0 border-2 inline-flex items-center justify-center ml-4">
-                  <AddToFav />
+                  <AddToFav product={product} />
                 </button>
               </div>
             </div>

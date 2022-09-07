@@ -1,8 +1,9 @@
 import React from "react";
-import CartQuantity from "./CartQuantity";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import ItemQuantity from "./ItemQuantity";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../../app/slices/cartSlice";
+import Tooltip from "@mui/material/Tooltip";
 
 export default function CartItem({
   id,
@@ -25,39 +26,42 @@ export default function CartItem({
           className="col object-center rounded object-contain"
         />
 
-        <div className=" mx-2 container flex justify-between col-span-3">
-          <div className="mx-2 text-gray-700 dark:text-gray-100 ">
-            <p className="text-sm sm:text-xl my-4 font-black leading-none ">
-              {title}
-            </p>
-
-            <p className="text-sm leading-3  py-2">Color: Black</p>
-            <p className="text-sm leading-3  py-2">Size: small</p>
-            <p className="text-sm leading-3  py-2">Category: {category}</p>
-
-            <button
-              onClick={() => dispatch(removeItem(id))}
-              className="mt-14 border-2 dark:bg-inherit dark:border-white border-red-500 text-red-500 dark:text-white px-2 py-1 rounded-md "
-            >
-              <DeleteOutlineIcon />
-              
-            </button>
-          </div>
-          <div className="h-full flex flex-col justify-between">
+        <div className=" mx-2 container flex flex-col col-span-3">
+          <div className="mx-2 text-gray-700 flex justify-between dark:text-gray-100 ">
             <div>
+              <p className="text-sm sm:text-xl my-4 font-black leading-none ">
+                {title}
+              </p>
+
+              <p className="text-sm leading-3  py-2">Color: Black</p>
+              <p className="text-sm leading-3  py-2">Size: small</p>
+              <p className="text-sm leading-3  py-2">Category: {category}</p>
+            </div>
+
+            <div className="flex flex-col items-center">
               <label
                 htmlFor="custom-input-number"
-                className="w-full  text-gray-900 dark:text-gray-100 text-md font-semibold px-4"
+                className="text-gray-900 px-2 dark:text-gray-100 text-md font-semibold"
               >
                 Quantity
               </label>
-              <CartQuantity
+              <ItemQuantity
                 id={id}
                 quantity={quantity}
-                className="py-2 px-1 border border-gray-200 focus:outline-none"
+                className=" border border-gray-200 focus:outline-none"
               />
             </div>
+          </div>
 
+          <div className="flex justify-between mt-16 px-4">
+            <button
+              onClick={() => dispatch(removeItem(id))}
+              className="border-2 dark:bg-white border-red-500  text-red-500 px-2 py-1 rounded-md "
+            >
+              <Tooltip title="Remove item">
+                <DeleteIcon />
+              </Tooltip>
+            </button>
             <div className="text-2xl ml-6 mb-2 font-black leading-none text-gray-800 dark:text-white ">
               {total.toFixed(2)}$
             </div>

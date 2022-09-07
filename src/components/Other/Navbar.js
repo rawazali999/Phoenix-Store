@@ -1,9 +1,10 @@
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { Link, NavLink } from "react-router-dom";
 import { logout } from "../../app/slices/authenticationSlice";
 import { useSelector, useDispatch } from "react-redux";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import SearchBar from "./SearchBar";
 import ThemeToggle from "../Theme/ThemeToggle";
 
@@ -135,7 +136,7 @@ export default function Navbar() {
               ) : (
                 <Link
                   to="/login"
-                  className="mt-6 navlink  mr-2 lg:inline-block text-gray-100 px-1 mb-1 flex"
+                  className="mt-6 navlink  mr-2 lg:inline-block text-white px-1 mb-1 flex"
                   title="Login"
                   aria-label="Login"
                 >
@@ -145,7 +146,7 @@ export default function Navbar() {
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
-                    strokeWidth={2}
+                    strokeWidth={1.5}
                   >
                     <path
                       strokeLinecap="round"
@@ -155,6 +156,29 @@ export default function Navbar() {
                   </svg>
                 </Link>
               )}
+
+              {/* favorite link button  */}
+              <Link
+                to="/favorites"
+                className="mt-6 navlink mr-2 lg:inline-block text-white px-1 mb-1 flex"
+                title="Favorite"
+                aria-label="Favorite"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="w-5 sm:w-7"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </Link>
 
               {/* cart button */}
 
@@ -173,11 +197,11 @@ export default function Navbar() {
                 )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 sm:w-7 text-gray-100 "
+                  className="w-5 sm:w-7 text-white "
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  strokeWidth={2}
+                  strokeWidth={1.5}
                 >
                   <path
                     strokeLinecap="round"
@@ -192,9 +216,15 @@ export default function Navbar() {
                 <Disclosure.Button className="inline-flex items-center justify-center mb-2 p-2 rounded-md text-gray-100 hover:text-custom5 ">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XIcon className="block  w-5" aria-hidden="true" />
+                    <CloseRoundedIcon
+                      className="block  w-5"
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <MenuIcon className="block  w-5" aria-hidden="true" />
+                    <MenuRoundedIcon
+                      className="block  w-5"
+                      aria-hidden="true"
+                    />
                   )}
                 </Disclosure.Button>
               </div>

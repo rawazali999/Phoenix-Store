@@ -6,7 +6,7 @@ export default function CartQuantity(props) {
   const dispatch = useDispatch();
 
   return (
-    <div className="w-32 ">
+    <div className="w-28">
       <div className="flex flex-row h-10 w-full rounded-lg relative   mt-1">
         <button
           // onClick={() => dispatch(decrement())}
