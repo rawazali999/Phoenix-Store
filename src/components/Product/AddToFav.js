@@ -9,12 +9,12 @@ export default function AddToFav({ product }) {
   const dispatch = useDispatch();
 
   const [buttonColor, setButtonColor] = useState("white");
-  const [title, setTitle] = useState("add to favorites");
+  const [title, setTitle] = useState("Add to wishlist");
 
   function changeColor() {
     if (buttonColor === "white") {
       setButtonColor("#FF1A1A");
-      setTitle("remove from favorites");
+      setTitle("Remove from wishlist");
       dispatch(
         addToFav({
           id: product.id,
@@ -26,7 +26,7 @@ export default function AddToFav({ product }) {
       );
     } else {
       setButtonColor("white");
-      setTitle("add to favorites");
+      setTitle("Add to wishlist");
       dispatch(removeFav(product.id));
     }
   }

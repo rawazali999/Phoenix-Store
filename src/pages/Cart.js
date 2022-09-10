@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Summary from "../components/Cart/Summary";
 
 export default function Cart() {
-  const cart = useSelector((state) => state.cart.cart);
+  const cart = useSelector((state) => state.cart.items);
 
   return (
     <Layout>

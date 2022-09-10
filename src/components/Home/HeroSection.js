@@ -28,14 +28,14 @@ export default function HeroSection() {
           <div className="flex items-center">
             <Link
               to="/products"
-              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide text-white dark:text-custom1 bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 focus:shadow-outline focus:outline-none"
+              className="inline-flex items-center justify-between h-12 p-3  mr-6 font-medium tracking-wide text-white dark:text-custom1 bg-custom4 dark:bg-slate-100 transition duration-200 rounded shadow-lg hover:bg-custom3 "
             >
               Shop Now <ShoppingBagOutlinedIcon className="ml-2" />
             </Link>
             <Link
               to="/login"
               aria-label=""
-              className="inline-flex items-center justify-between h-12 px-3 mr-6 font-medium tracking-wide bg-inherit dark:text-gray-100  dark:border   transition duration-200 rounded "
+              className="inline-flex items-center justify-between h-12 p-3 mr-6 font-medium tracking-wide bg-inherit dark:text-gray-100  dark:border   transition duration-200 rounded "
             >
               Login first<LoginIcon className="ml-2"/>
             </Link>

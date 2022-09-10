@@ -15,7 +15,7 @@ export default function ProductCard({ product }) {
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100 capitalize">
-            {delimiter(product.title, 20)}
+            {delimiter(product.title, 18)}
           </h1>
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
             {delimiter(product.description, 50)}
@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
       </Link>
       <div className="flex items-center justify-between  px-4 py-2 bg-gray-900 dark:bg-gray-700">
         <h1 className="text-xl font-bold text-white">{product.price} $</h1>
-        <div className="flex">
+        <div className="flex space-x-1">
           <button
             onClick={() => {
               dispatch(

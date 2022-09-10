@@ -9,10 +9,12 @@ const favoriteSlice = createSlice({
   initialState,
   reducers: {
     addToFav: (state, action) => {
-      state.favorite.find(
-        (item) => item.id === action.payload.id,
-        state.favorite.push({ ...action.payload })
+      const ItemInWishlist = state.favorite.find(
+        (item) => item.id === action.payload.id
       );
+      if (!ItemInWishlist) {
+        state.favorite.push({ ...action.payload });
+      }
     },
     removeFav: (state, action) => {
       const removeFav = state.favorite.filter(
@@ -23,6 +25,6 @@ const favoriteSlice = createSlice({
   },
 });
 
-export const { addToFav, removeFav } = favoriteSlice.actions;
+export const { addToFav, removeFav  } = favoriteSlice.actions;
 
 export default favoriteSlice.reducer;

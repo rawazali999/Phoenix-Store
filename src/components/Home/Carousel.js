@@ -11,7 +11,7 @@ export default function NewCarousel() {
           Our Products Categories{" "}
         </div>
       </div>
-      <hr className="border-2 rounded-full w-2/5 mx-auto  border-cyan-500 mb-10 -mt-5 " />
+      <hr className="border-2 rounded-full w-4/5 md:w-2/5  mx-auto  border-cyan-500 mb-10 -mt-5 " />
       <Carousel
         swipeable={true}
         showStatus={false}

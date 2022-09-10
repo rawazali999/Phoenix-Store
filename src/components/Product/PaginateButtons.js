@@ -17,7 +17,7 @@ export const prevButton = (
           d="M7 16l-4-4m0 0l4-4m-4 4h18"
         />
       </svg>
-      <span className="mx-1">previous</span>
+      <span className="mx-1 hidden sm:inline">previous</span>
     </div>
   </button>
 );
@@ -25,7 +25,7 @@ export const prevButton = (
 export const nextButton = (
   <button className="px-4 py-2 mx-1 text-gray-800 capitalize bg-gray-300 rounded-md hover:bg-blue-500 hover:text-gray-100 ">
     <div className="flex items-center -mx-1">
-      <span className="mx-1">Next</span>
+      <span className="mx-1 hidden sm:inline">Next</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="w-6 h-6 mx-1 rtl:-scale-x-100"

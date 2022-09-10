@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 export default function Summary() {
-  const cart = useSelector((state) => state.cart.cart);
+  const cart = useSelector((state) => state.cart.items);
   const getTotal = () => {
     let totalQuantity = 0;
     let totalPrice = 0;

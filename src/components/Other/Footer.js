@@ -7,35 +7,25 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="relative mt-16  rounded-t-3xl bg-gradient-to-r from-cyan-300 to-blue-600 dark:from-darkFrom dark:bg-darkTo">
-      {/* <svg
-        className="absolute top-0 w-full h-6 -mt-3 sm:-mt-10 sm:h-12"
-        preserveAspectRatio="none"
-        viewBox="0 0 1440 54"
-      >
-        <path
-          fill="currentColor"
-          d="M0 22L120 16.7C240 11 480 1.00001 720 0.700012C960 1.00001 1200 11 1320 16.7L1440 22V54H1320C1200 54 960 54 720 54C480 54 240 54 120 54H0V22Z"
-        />
-      </svg> */}
       <div className="px-4  mx-auto py-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 row-gap-10 ">
           {/* logo and contact details */}
           <div className="col-span-2">
-            <a
-              href="/"
+            <Link
+              to="/"
               aria-label="Go home"
               title="Company"
               className="inline-flex items-center"
             >
               <img
                 className="mx-1 w-14 h-auto   "
-                src={require("../../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
+                src={require("../../images/phoenix-logo.png")}
                 alt="logo"
               />
               <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
                 Phoenix Store
               </span>
-            </a>
+            </Link>
             <div className="m-4 lg:max-w-sm grid grid-cols-1 dark:text-gray-200 ">
               <div className="my-1">
                 <LocationOnIcon />
@@ -50,8 +40,10 @@ export default function Footer() {
                 <span className="mx-4 ">info@company.com</span>
               </div>
             </div>
-            <div className="m-4 text-custom1 dark:text-gray-100">You can find us at:</div>
-            <div className="flex items-center m-4 space-x-12 text-custom1 dark:text-gray-100 ">
+            <div className="m-4 text-custom1 dark:text-gray-100">
+              You can find us at:
+            </div>
+            <div className="flex items-center m-4 space-x-8 text-custom1 dark:text-gray-100 ">
               <a
                 href="/"
                 aria-label="twitter"
@@ -80,32 +72,55 @@ export default function Footer() {
                   <path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" />
                 </svg>
               </a>
+              <a
+                href="/"
+                aria-label="linkedin"
+                className="transition-colors duration-300 "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg "
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-7"
+                >
+                  <path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM8.339 18.337H5.667v-8.59h2.672v8.59zM7.003 8.574a1.548 1.548 0 1 1 0-3.096 1.548 1.548 0 0 1 0 3.096zm11.335 9.763h-2.669V14.16c0-.996-.018-2.277-1.388-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248h-2.667v-8.59h2.56v1.174h.037c.355-.675 1.227-1.387 2.524-1.387 2.704 0 3.203 1.778 3.203 4.092v4.71z"></path>
+                </svg>
+              </a>
             </div>
           </div>
           {/* categories links */}
           <div className="my-2 px-2">
             <p className="font-semibold text-white ">Category</p>
-            <ul className="mt-2 space-y-2 text-custom1 hover:text-custom5 dark:text-gray-200 ">
+            <ul className="mt-2 space-y-2 text-custom1  dark:text-gray-200 ">
               <li>
-                <Link to="/men" className="transition-colors duration-300">
+                <Link
+                  to="/men"
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
+                >
                   Men
                 </Link>
               </li>
               <li>
-                <Link to={"/women"} className="transition-colors duration-300 ">
+                <Link
+                  to={"/women"}
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
+                >
                   Women
                 </Link>
               </li>
               <li>
                 <Link
                   to={"/electronics"}
-                  className="transition-colors duration-300 "
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
                 >
                   Electronics
                 </Link>
               </li>
               <li>
-                <a href="/" className="transition-colors duration-300 ">
+                <a
+                  href="/"
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
+                >
                   Jewelries
                 </a>
               </li>
@@ -114,42 +129,44 @@ export default function Footer() {
           {/* some other links */}
           <div className="my-2 px-4 ">
             <p className="font-semibold tracking-wide text-white">Pages</p>
-            <ul className="mt-2 space-y-2 text-custom1 dark:text-gray-100 hover:text-custom5">
+            <ul className="mt-2 space-y-2 text-custom1 dark:text-gray-100 ">
               <li>
-                <Link to="/" className="transition-colors duration-300 ">
+                <Link
+                  to="/"
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
+                >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
                   to="/products"
-                  className="transition-colors duration-300 "
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
                 >
                   Products
                 </Link>
               </li>
               <li>
-                <Link to="/men" className="transition-colors duration-300 ">
-                  Men
-                </Link>
-              </li>
-              <li>
-                <Link to="/women" className="transition-colors duration-300 ">
-                  Women
+                <Link
+                  to="/cart"
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
+                >
+                  Cart
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/electronics"
-                  className="transition-colors duration-300 "
+                  to="/favorite"
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
                 >
-                  Electronics
+                  WishList
                 </Link>
               </li>
+
               <li>
                 <Link
                   to="/ContactUs"
-                  className="transition-colors duration-300 "
+                  className="transition-colors duration-300 hover:text-custom5 navlink "
                 >
                   Contact Us
                 </Link>

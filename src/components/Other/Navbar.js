@@ -11,12 +11,22 @@ import ThemeToggle from "../Theme/ThemeToggle";
 export default function Navbar() {
   const auth = useSelector((state) => state.auth);
 
-  const cart = useSelector((state) => state.cart.cart);
+  const items = useSelector((state) => state.cart.items);
   // total cart items
   const getTotalQuantity = () => {
     let total = 0;
-    cart.forEach((item) => {
+    items.forEach((item) => {
       total += item.quantity;
+    });
+    return total;
+  };
+
+  const fav = useSelector((state) => state.fav.favorite);
+  // total fav items
+  const getTotalFav = () => {
+    let total = 0;
+    fav.forEach(() => {
+      total += 1;
     });
     return total;
   };
@@ -40,12 +50,14 @@ export default function Navbar() {
 
           <div className="flex justify-between flex-shrink w-full  sm:pb-2 ">
             {/* name and logo */}
-            <div className="flex items-start text-custom3  my-2  sm:mt-4">
-              <img
-                className="mx-0.5 w-14 h-auto"
-                src={require("../../images/kisspng-phoenix-logo-drawing-clip-art-5af979a03d3910.2233163115262990402508.png")}
-                alt="logo"
-              />
+            <div className="flex items-start text-custom3  my-2 sm:mt-4">
+              <Link to={"/"}>
+                <img
+                  className="mx-0.5 w-14 h-auto"
+                  src={require("../../images/phoenix-logo.png")}
+                  alt="logo"
+                />
+              </Link>
               <span className="font-medium font-Robonto text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
                 Phoenix <br className="sm:hidden" />
                 Store
@@ -58,18 +70,18 @@ export default function Navbar() {
             </div>
 
             {/* Login and Cart buttons*/}
-            <div className="mt-3 text-md font-bold flex justify-between">
+            <div className="mt-3 flex justify-between">
               <ThemeToggle />
 
               {auth.isAuthenticated ? (
                 <>
-                  <Menu as="div" className="mt-5 sm:w-10 w-7  text-pallete1">
+                  <Menu as="div" className="mt-5  w-10 h-auto">
                     <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom3 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
                         src="https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?w=2000"
-                        alt=""
+                        alt="avatar"
                       />
                     </Menu.Button>
 
@@ -160,21 +172,28 @@ export default function Navbar() {
               {/* favorite link button  */}
               <Link
                 to="/favorites"
-                className="mt-6 navlink mr-2 lg:inline-block text-white px-1 mb-1 flex"
-                title="Favorite"
+                className="navlink mr-2  px-1  flex"
+                title="Wishlist"
                 aria-label="Favorite"
               >
+                {getTotalFav() > 0 ? (
+                  <span className=" text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
+                    {getTotalFav() || 0}
+                  </span>
+                ) : (
+                  <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
+                )}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="w-5 sm:w-7"
+                  className="w-5 sm:w-7 text-white"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                   />
                 </svg>
@@ -189,7 +208,7 @@ export default function Navbar() {
                 className="navlink px-2"
               >
                 {getTotalQuantity() > 0 ? (
-                  <span className="bg-red-500 sm:text-sm text-xs text-white rounded-full px-2 py-0.5 ml-4 -mr-4">
+                  <span className=" text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
                     {getTotalQuantity() || 0}
                   </span>
                 ) : (

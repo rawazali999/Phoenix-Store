@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { login } from "../app/slices/authenticationSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Tooltip } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -12,26 +14,30 @@ export default function Login() {
   function submitHandler(e) {
     e.preventDefault();
     dispatch(login(form.username));
-    navigate("/", { replace: true }); 
+    navigate("/", { replace: true });
   }
 
   function onChangeHandler(event) {
     const name = event.target.name;
     const value = event.target.value;
     setForm((values) => ({ ...values, [name]: value }));
-    
-
-   
   }
   return (
-    <section id="login" className="w-full h-full bg-slate-100 ">
-      <div className="flex justify-center">
+    <section id="login" className="w-full h-full">
+      <div className="flex justify-center items-center">
         <div className="flex items-center justify-center mt-12 h-full">
           <div className=" flex flex-col sm:w-full w-4/5 px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
-            <div className="text-center my-3 font-bold">
-              <h1 className="text-custom2 text-xl">Sign in Phoenix Store</h1>
-              <hr className="mt-2 border-amber-700" />
+            <div className="text-center font-bold flex">
+              <Link to="/" className=" pt-2 text-red-600 ">
+                <Tooltip title="Back to home">
+                  <ArrowBackIcon />
+                </Tooltip>
+              </Link>
+              <h1 className="text-red-600 text-xl pt-2 mx-2">
+                Sign in Phoenix Store
+              </h1>
             </div>
+            <hr className="my-2 border-amber-700" />
             <form onSubmit={submitHandler}>
               <div className="relative w-full mb-3">
                 <label
@@ -47,7 +53,7 @@ export default function Login() {
                   style={{ transition: "all .15s ease" }}
                   name="username"
                   onChange={onChangeHandler}
-                  value={form.username || ''}
+                  value={form.username || ""}
                 />
               </div>
 
@@ -63,8 +69,8 @@ export default function Login() {
                   className="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
                   placeholder="Password"
                   style={{ transition: "all .15s ease" }}
-                  name='password'
-                  value={form.password || ''}
+                  name="password"
+                  value={form.password || ""}
                   onChange={onChangeHandler}
                 />
               </div>
