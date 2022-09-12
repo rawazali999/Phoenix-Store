@@ -77,7 +77,7 @@ export default function ProductPage({ product }) {
                 <div className="flex">
                   <span className="mr-3 mt-2 dark:text-gray-100">Color</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                    <select className="rounded border appearance-none border-gray-300 py-2 text-base pl-3 pr-10">
                       <option>Black</option>
                       <option>White</option>
                       <option>Brown</option>
@@ -101,7 +101,7 @@ export default function ProductPage({ product }) {
                 <div className="flex ml-6 items-center">
                   <span className="mr-3 dark:text-gray-100">Size</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base pl-3 pr-10">
+                    <select className="rounded border appearance-none border-gray-300 py-2   text-base pl-3 pr-10">
                       <option>SM</option>
                       <option>MD</option>
                       <option>L</option>

@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../app/slices/cartSlice";
 import { removeFav } from "../../app/slices/favoriteSlice";
 import { delimiter } from "../../utilities/delimiter";
+import { Tooltip } from "@mui/material";
 
 export default function FavoriteCard({ id, image, title, price, category }) {
   const dispatch = useDispatch();
@@ -27,30 +28,34 @@ export default function FavoriteCard({ id, image, title, price, category }) {
             </span>
 
             <div className="space-x-2">
-              <button
-                onClick={() => {
-                  dispatch(
-                    addToCart({
-                      id: id,
-                      title: title,
-                      price: price,
-                      image: image,
-                      category: category,
-                    })
-                  );
-                }}
-                className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
-              >
-                <ShoppingCartOutlinedIcon />
-              </button>
-              <button
-                onClick={() => {
-                  dispatch(removeFav(id));
-                }}
-                className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
-              >
-                <HeartBrokenIcon />{" "}
-              </button>
+              <Tooltip title="Add to cart">
+                <button
+                  onClick={() => {
+                    dispatch(
+                      addToCart({
+                        id: id,
+                        title: title,
+                        price: price,
+                        image: image,
+                        category: category,
+                      })
+                    );
+                  }}
+                  className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
+                >
+                  <ShoppingCartOutlinedIcon />
+                </button>
+              </Tooltip>
+              <Tooltip title="Remove from Wishlist">
+                <button
+                  onClick={() => {
+                    dispatch(removeFav(id));
+                  }}
+                  className="px-2 py-1 text-xs font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
+                >
+                  <HeartBrokenIcon />{" "}
+                </button>
+              </Tooltip>
             </div>
           </div>
         </div>

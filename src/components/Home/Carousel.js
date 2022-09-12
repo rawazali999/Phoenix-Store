@@ -6,7 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 export default function NewCarousel() {
   return (
     <>
-      <div className="flex capitalize  items-center justify-center text-3xl font-bold mt-10 text-custom1 dark:text-gray-100">
+      <div className="flex capitalize  items-center justify-center text-xl sm:text-3xl tracking-wider font-semibold  mt-10 text-custom1 dark:text-gray-100">
         <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo px-4">
           Our Products Categories{" "}
         </div>
@@ -24,7 +24,8 @@ export default function NewCarousel() {
         useKeyboardArrows={true}
         stopOnHover={true}
         showArrows={true}
-        className=" w-5/6 sm:w-3/5 mx-auto h-auto"
+        transitionTime={1000}
+        className=" w-5/6 sm:w-3/5 mx-auto"
       >
         {/* first slide */}
         <div className="grid-cols-3 gap-1 grid">

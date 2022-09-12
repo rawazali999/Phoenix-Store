@@ -1,6 +1,7 @@
 import React from "react";
 import { ThemeContext } from "./themeContext";
 import { useContext } from "react";
+import Tooltip from "@mui/material/Tooltip";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
@@ -8,10 +9,11 @@ const ThemeToggle = () => {
   return (
     <div className="mt-6 sm:mt-6 ">
       {theme === "dark" ? (
+        <Tooltip title="Switch to Light Mode">
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className=" text-white  shadow-none mx-1 px-2  cursor-pointer"
-          title="Toggle Theme"
+          
           
         >
           <svg
@@ -29,11 +31,12 @@ const ThemeToggle = () => {
             ></path>
           </svg>
         </button>
+        </Tooltip>
       ) : (
+        <Tooltip title="Switch to Dark Mode">
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           className="text-white mx-1 px-2  outline-none  cursor-pointer"
-          title="Toggle Theme"
           area-label="moon"
         >
           <svg
@@ -51,6 +54,7 @@ const ThemeToggle = () => {
             ></path>
           </svg>
         </button>
+        </Tooltip>
       )}
     </div>
   );

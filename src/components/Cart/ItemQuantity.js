@@ -6,10 +6,9 @@ export default function CartQuantity(props) {
   const dispatch = useDispatch();
 
   return (
-    <div className="w-28">
+    <div className="w-20 sm:w-28 ">
       <div className="flex flex-row h-10 w-full rounded-lg relative   mt-1">
         <button
-          // onClick={() => dispatch(decrement())}
           onClick={() => dispatch(decrementQuantity(props.id))}
           className=" bg-gray-300 text-black hover:bg-gray-400 h-full w-10 rounded-l cursor-pointer outline-none"
         >
@@ -23,7 +22,6 @@ export default function CartQuantity(props) {
          { props.quantity }
         </span>
         <button
-          // onClick={() => dispatch(increment())}
           onClick={() => dispatch(incrementQuantity(props.id))}
           className="bg-gray-300 text-black  hover:bg-gray-400 h-full w-10 rounded-r cursor-pointer"
         >

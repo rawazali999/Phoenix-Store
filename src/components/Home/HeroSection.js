@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
-import LoginIcon from '@mui/icons-material/Login';
+import LoginIcon from "@mui/icons-material/Login";
 
 export default function HeroSection() {
   return (
@@ -15,15 +15,14 @@ export default function HeroSection() {
       </div>
       <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg  lg:pr-5">
-          
-          <h2 className="mb-6 font-poppins text-3xl font-bold  text-custom1 dark:text-gray-200 sm:text-4xl sm:leading-none">
+          <h2 className="mb-6 font-poppins text-xl sm:text-3xl font-medium  text-custom1 dark:text-gray-200 ">
             Anything you Want <br /> We Have it Here ...
           </h2>
           <p className="pr-5 text-base text-custom1 dark:text-gray-300 md:text-lg">
             Our store has best products in each category :
           </p>
           <p className="pr-5 mb-5 text-base text-custom4  md:text-lg">
-            Electronics , Men Clothes  <br /> Women Clothes , Sport Clothes
+            Electronics , Men Clothes <br /> Women Clothes , Jewelries
           </p>
           <div className="flex items-center">
             <Link
@@ -37,7 +36,8 @@ export default function HeroSection() {
               aria-label=""
               className="inline-flex items-center justify-between h-12 p-3 mr-6 font-medium tracking-wide bg-inherit dark:text-gray-100  dark:border   transition duration-200 rounded "
             >
-              Login first<LoginIcon className="ml-2"/>
+              Login first
+              <LoginIcon className="ml-2" />
             </Link>
           </div>
         </div>

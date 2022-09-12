@@ -22,14 +22,14 @@ export default function CartItem({
       <div className="mt-14 pt-4 border-t border-gray-200 grid grid-cols-1 sm:grid-cols-4">
         <img
           src={image}
-          alt="l"
-          className="col object-center rounded object-contain"
+          alt="item "
+          className=" mb-1 rounded mx-auto object-contain w-1/2 sm:w-full sm:mb-0"
         />
 
         <div className=" mx-2 container flex flex-col col-span-3">
-          <div className="mx-2 text-gray-700 flex justify-between dark:text-gray-100 ">
+          <div className="mx-2 text-custom1 flex justify-between dark:text-gray-100 ">
             <div>
-              <p className="text-sm sm:text-xl my-4 font-black leading-none ">
+              <p className="text-sm sm:text-xl my-4 font-semibold ">
                 {title}
               </p>
 

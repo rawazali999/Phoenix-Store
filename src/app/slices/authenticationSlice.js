@@ -12,13 +12,11 @@ const authenticationSlice = createSlice({
     login: (state, action) => {
       state.isAuthenticated = true;
       state.username = action.payload;
-      console.log('login action');
       localStorage.setItem('username', action.payload);
     },
     logout: (state) => {
       state.isAuthenticated = false;
       state.username = '';
-      console.log('logout action');
       localStorage.removeItem('username');
     },
   },

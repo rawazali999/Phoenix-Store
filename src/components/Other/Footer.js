@@ -183,11 +183,11 @@ export default function Footer() {
                 placeholder="Email"
                 required
                 type="text"
-                className="flex-grow w-56 h-12 px-4 mb-3 transition duration-200 bg-white border-2 border-custom1   rounded lg:rounded-r-none shadow-sm appearance-none lg:mb-0  focus:outline-none focus:shadow-outline"
+                className="flex-grow w-52 mr-2 lg:mr-0 h-12 px-4 mb-3 transition duration-200 bg-white border-2 border-custom1 dark:border-gray-50   rounded lg:rounded-r-none shadow-sm appearance-none lg:mb-0  focus:outline-none focus:shadow-outline"
               />
               <button
                 type="submit"
-                className=" w-28 h-12 px-2 py-2.5  font-semibold tracking-wide text-white dark:text-custom1 transition duration-200 rounded lg:rounded-l-none shadow-md bg-custom1 dark:bg-white border-2 border-custom1  focus:shadow-outline focus:outline-none"
+                className="w-52 lg:w-28 h-12  mr-2 lg:mr-0 px-2  font-semibold tracking-wide text-white dark:text-gray-100 transition duration-200 rounded lg:rounded-l-none shadow-md bg-custom1 dark:bg-inherit border-2 border-custom1 dark:border-gray-50  focus:shadow-outline focus:outline-none"
               >
                 Subscribe
               </button>
