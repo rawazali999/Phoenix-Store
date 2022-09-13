@@ -33,7 +33,7 @@ Start the server
 ## Features
 
 - Light/dark mode toggle
-- fetch data from API
+- fetch data from API [Fake Store API](https://fakestoreapi.com/)
 - State Management
 - Responsive on different screen sizes
 - Add to cart and favorite list functionality 
