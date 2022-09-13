@@ -1,7 +1,12 @@
 import React from "react";
 
 export const prevButton = (
-  <button className="px-4 py-2 mx-1 rounded-md text-gray-800 capitalize bg-gray-300 hover:bg-blue-500  hover:text-gray-100 ">
+  <button
+    onClick={() => {
+      window.scrollTo(0, 100);
+    }}
+    className="px-4 py-2 mx-1 rounded-md text-gray-800 capitalize bg-gray-300 hover:bg-blue-500  hover:text-gray-100 "
+  >
     <div className="flex items-center -mx-1">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +28,12 @@ export const prevButton = (
 );
 
 export const nextButton = (
-  <button className="px-4 py-2 mx-1 text-gray-800 capitalize bg-gray-300 rounded-md hover:bg-blue-500 hover:text-gray-100 ">
+  <button
+    onClick={() => {
+      window.scrollTo(0, 100);
+    }}
+    className="px-4 py-2 mx-1 text-gray-800 capitalize bg-gray-300 rounded-md hover:bg-blue-500 hover:text-gray-100 "
+  >
     <div className="flex items-center -mx-1">
       <span className="mx-1 hidden sm:inline">Next</span>
       <svg

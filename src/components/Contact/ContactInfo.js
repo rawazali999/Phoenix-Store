@@ -20,7 +20,7 @@ export default function ContactInfo() {
       >
         GET IN TOUCH WITH US
       </h2>
-      <p className="text-base text-body-color leading-relaxed mb-9">
+      <p className="text-base leading-relaxed mb-9">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius
         tempor incididunt ut labore et dolore magna aliqua. Ut enim adiqua minim
         veniam quis nostrud exercitation ullamco
@@ -55,10 +55,8 @@ export default function ContactInfo() {
           </svg>
         </div>
         <div className="w-full">
-          <h4 className="font-bold text-dark text-xl mb-1">Our Location</h4>
-          <p className="text-base text-body-color">
-            99 S.t Jomblo Park Pekanbaru 28292. Indonesia
-          </p>
+          <h4 className="font-bold text-xl mb-1">Our Location</h4>
+          <p className="text-base ">Erbil , Kurdistan</p>
         </div>
       </div>
       <div className="flex mb-8 max-w-[370px] w-full">
@@ -93,8 +91,8 @@ export default function ContactInfo() {
           </svg>
         </div>
         <div className="w-full">
-          <h4 className="font-bold text-dark text-xl mb-1">Phone Number</h4>
-          <p className="text-base text-body-color">(+62)81 414 257 9980</p>
+          <h4 className="font-bold  text-xl mb-1">Phone Number</h4>
+          <p className="text-base">(+964) 750 123 4567</p>
         </div>
       </div>
       <div className="flex mb-8 max-w-[370px] w-full">
@@ -127,8 +125,8 @@ export default function ContactInfo() {
           </svg>
         </div>
         <div className="w-full">
-          <h4 className="font-bold text-dark text-xl mb-1">Email Address</h4>
-          <p className="text-base text-body-color">info@yourdomain.com</p>
+          <h4 className="font-bold  text-xl mb-1">Email Address</h4>
+          <p className="text-base">info@yourdomain.com</p>
         </div>
       </div>
     </div>

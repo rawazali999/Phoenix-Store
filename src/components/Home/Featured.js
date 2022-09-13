@@ -31,7 +31,7 @@ export default function Featured({ product }) {
           {delimiter(product.title, 18)}
         </h2>
         <div className="flex justify-between">
-          <p className="mt-1 dark:text-gray-50">${product.price}</p>
+          <p className="mt-1 dark:text-gray-50 text-lg">${product.price}</p>
           <div className="flex py-1 px-2 space-x-2   bg-slate-500 rounded-sm">
             <button
               onClick={() => {

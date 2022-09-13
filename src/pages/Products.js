@@ -42,6 +42,7 @@ export default function Products() {
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % products.length;
     setItemOffset(newOffset);
+    window.scrollTo(0, 100);
   };
 
   return (

@@ -72,6 +72,67 @@ export default function Navbar() {
             {/* Login and Cart buttons*/}
             <div className="mt-3 flex justify-between">
               <ThemeToggle />
+               {/* wishlist page button  */}
+               <Tooltip title="Wishlist">
+                <Link
+                  to="/favorites"
+                  className="navlink px-2 mr-1 flex"
+                  aria-label="Wishlist"
+                >
+                  {getTotalFav() > 0 ? (
+                    <span className=" text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
+                      {getTotalFav() || 0}
+                    </span>
+                  ) : (
+                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
+                  )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-5 sm:w-7 text-white"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                    />
+                  </svg>
+                </Link>
+              </Tooltip>
+
+              {/* cart button */}
+              <Tooltip title="Cart">
+                <Link
+                  to="/cart"
+                  aria-label="cart"
+                  className="navlink px-1 mr-2"
+                >
+                  {getTotalQuantity() > 0 ? (
+                    <span className="text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
+                      {getTotalQuantity() || 0}
+                    </span>
+                  ) : (
+                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
+                  )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 sm:w-7 text-white "
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                    />
+                  </svg>
+                </Link>
+              </Tooltip>
 
               {auth.isAuthenticated ? (
                 <>
@@ -141,16 +202,16 @@ export default function Navbar() {
                       </Menu.Items>
                     </Transition>
                   </Menu>
-                  <div className="text-gray-700 dark:text-gray-200 mr-4 ml-2 mt-2 text-sm sm:text-lg py-4">
+                  <div className="text-gray-700 dark:text-gray-200 mt-2 text-sm sm:text-lg py-4">
                     {auth.username}
                   </div>
                 </>
               ) : (
-                // add tooltip
+                
                 <Tooltip title="Login">
                   <Link
                     to="/login"
-                    className="mt-6 navlink  mr-2 lg:inline-block text-white px-1 mb-1 flex"
+                    className="mt-6 navlink   lg:inline-block text-white px-1 mb-1 flex"
                     aria-label="Login"
                   >
                     <svg
@@ -171,67 +232,7 @@ export default function Navbar() {
                 </Tooltip>
               )}
 
-              {/* wishlist page button  */}
-              <Tooltip title="Wishlist">
-                <Link
-                  to="/favorites"
-                  className="navlink px-1 flex"
-                  aria-label="Favorite"
-                >
-                  {getTotalFav() > 0 ? (
-                    <span className=" text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
-                      {getTotalFav() || 0}
-                    </span>
-                  ) : (
-                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
-                  )}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-5 sm:w-7 text-white"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                    />
-                  </svg>
-                </Link>
-              </Tooltip>
-
-              {/* cart button */}
-              <Tooltip title="Cart">
-                <Link
-                  to="/cart"
-                  aria-label="cart"
-                  className="navlink px-1"
-                >
-                  {getTotalQuantity() > 0 ? (
-                    <span className="text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
-                      {getTotalQuantity() || 0}
-                    </span>
-                  ) : (
-                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
-                  )}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-5 sm:w-7 text-white "
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={1.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </Link>
-              </Tooltip>
+             
 
               <div className="text-my block sm:hidden mx-1 mt-4">
                 {/* Mobile size screen menu button*/}

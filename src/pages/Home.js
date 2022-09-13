@@ -46,7 +46,7 @@ export default function Home() {
         ) : (
           <div className="container my-20 mx-auto px-4 grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4  gap-6 object-fill">
             {products.slice(0, 8).map((product) => {
-              return <Featured product={product} />;
+              return <Featured product={product} key={product.id} />;
             })}
           </div>
         )}
