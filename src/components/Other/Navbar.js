@@ -48,18 +48,29 @@ export default function Navbar() {
       {({ open }) => (
         <div className="flex flex-col  bg-gradient-to-r  from-cyan-300 dark:from-darkFrom  to-blue-600 dark:to-darkTo  md:px-4 px-1 border-b shadow-sm  sm:pb-2 ">
           {/* first row  */}
-          <div className="flex justify-between flex-shrink w-full  sm:pb-2 ">
+          <div className="flex justify-between  w-full  sm:pb-2 ">
             {/* name and logo */}
-            <div className="flex text-custom3  my-2 sm:mt-4">
+            <div className="text-my block sm:hidden mx-1 mt-4">
+              {/* Mobile size screen menu button*/}
+              <Disclosure.Button className="inline-flex items-center justify-center   rounded-md text-white navlink">
+                <span className="sr-only">Open main menu</span>
+                {open ? (
+                  <CloseRoundedIcon className="block  w-10" aria-hidden="true" />
+                ) : (
+                  <MenuRoundedIcon className="block w-10" aria-hidden="true" />
+                )}
+              </Disclosure.Button>
+            </div>
+            <div className="flex items-center text-custom3 my-auto sm:mt-4">
               <Link to={"/"}>
                 <img
-                  className="mx-0.5 w-14 h-auto"
-                  src={require("../../images/phoenix-logo.png")}
+                  className="mx-0.5 w-10 sm:w-14 h-auto"
+                  src={require("../../images/shopping-cart.png")}
                   alt="logo"
                 />
               </Link>
-              <span className="font-medium font-Robonto text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
-                Phoenix <br className="sm:hidden" />
+              <span className="font-medium font-Robonto pre text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
+                Online <br className="block sm:hidden"/>
                 Store
               </span>
             </div>
@@ -69,18 +80,18 @@ export default function Navbar() {
               <SearchBar />
             </div>
 
-            {/* Login and Cart buttons*/}
-            <div className="mt-3 flex justify-between">
+            {/* theme and wishlist and  Login and Cart buttons*/}
+            <div className="flex justify-between md:mt-2">
               <ThemeToggle />
-               {/* wishlist page button  */}
-               <Tooltip title="Wishlist">
+              {/* wishlist page button  */}
+              <Tooltip title="Wishlist">
                 <Link
                   to="/favorites"
                   className="navlink px-2 mr-1 flex"
                   aria-label="Wishlist"
                 >
                   {getTotalFav() > 0 ? (
-                    <span className=" text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
+                    <span className=" text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 p-0.5 text-custom1  ml-4 ">
                       {getTotalFav() || 0}
                     </span>
                   ) : (
@@ -202,12 +213,11 @@ export default function Navbar() {
                       </Menu.Items>
                     </Transition>
                   </Menu>
-                  <div className="text-gray-700 dark:text-gray-200 mt-2 text-sm sm:text-lg py-4">
+                  <div className="text-gray-200 mt-2 text-sm sm:text-lg py-4">
                     {auth.username}
                   </div>
                 </>
               ) : (
-                
                 <Tooltip title="Login">
                   <Link
                     to="/login"
@@ -231,23 +241,6 @@ export default function Navbar() {
                   </Link>
                 </Tooltip>
               )}
-
-             
-
-              <div className="text-my block sm:hidden mx-1 mt-4">
-                {/* Mobile size screen menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center mb-2 py-2 rounded-md text-gray-100 hover:text-custom5 ">
-                  <span className="sr-only">Open main menu</span>
-                  {open ? (
-                    <CloseRoundedIcon
-                      className="block  w-5"
-                      aria-hidden="true"
-                    />
-                  ) : (
-                    <MenuRoundedIcon className="block w-5" aria-hidden="true" />
-                  )}
-                </Disclosure.Button>
-              </div>
             </div>
           </div>
           {/* second row (navigation links) */}

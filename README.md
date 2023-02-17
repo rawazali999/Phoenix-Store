@@ -1,5 +1,6 @@
-# Phoenix Store 
-## [Live Demo](https://phoenix-store.netlify.app/)
+# Online Store
+
+## [Live Demo](https://online-store-rawaz.netlify.app/)
 
 Front-end of an E-commerce website using React JS and Tailwind CSS
 
@@ -8,13 +9,13 @@ Front-end of an E-commerce website using React JS and Tailwind CSS
 Clone the project
 
 ```bash
-  git clone https://github.com/rawazali999/phoenix-store
+  git clone https://github.com/rawazali999/online-store
 ```
 
 Go to the project directory
 
 ```bash
-  cd phoenix-store
+  cd online-store
 ```
 
 Install dependencies
@@ -29,14 +30,13 @@ Start the server
   npm run start
 ```
 
-
 ## Features
 
 - Light/dark mode toggle
 - fetch data from API [Fake Store API](https://fakestoreapi.com/)
 - State Management
 - Responsive on different screen sizes
-- Add to cart and favorite list functionality 
+- Add to cart and favorite list functionality
 
 ## Pages
 
@@ -47,6 +47,7 @@ Start the server
 - Cart and Favorite List
 
 ## Dependencies
+
 - [tailwindcss](https://tailwindcss.com/)
 - [react-multi-carousel](https://www.npmjs.com/package/react-multi-carousel)
 - [react-paginate](https://www.npmjs.com/package/react-paginate)

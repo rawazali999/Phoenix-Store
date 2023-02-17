@@ -19,11 +19,11 @@ export default function Footer() {
             >
               <img
                 className="mx-1 w-14 h-auto   "
-                src={require("../../images/phoenix-logo.png")}
+                src={require("../../images/shopping-cart.png")}
                 alt="logo"
               />
               <span className="ml-2 text-xl font-bold tracking-wide text-white uppercase">
-                Phoenix Store
+                Online Store
               </span>
             </Link>
             <div className="m-4 lg:max-w-sm grid grid-cols-1 dark:text-gray-200 ">
@@ -196,7 +196,7 @@ export default function Footer() {
               get information about latest news , offers, discounts...
             </p>
             <p className="text-sm font-semibold my-10 text-custom1 dark:text-gray-100 ">
-              © Copyright 2022 Phoenix Store. All rights reserved.
+              © Copyright 2022 Online Store. All rights reserved.
             </p>
           </div>
         </div>

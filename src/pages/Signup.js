@@ -23,21 +23,27 @@ export default function Signup() {
     setForm((values) => ({ ...values, [name]: value }));
   }
   return (
-    <section id="signup" className="w-full h-full">
-      <div className="flex justify-center">
-        <div className="flex items-center justify-center mt-12 h-full">
+    <section
+      id="signup"
+      className=" w-screen h-screen bg-gradient-to-l from-cyan-300 to-blue-600 "
+    >
+      <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center h-full mt-8">
           <div className=" flex flex-col sm:w-full w-4/5 px-6 py-1 pt-0 mb-6 shadow-lg rounded-3xl bg-zinc-50 border-0">
-            <div className="text-center font-bold flex">
-              <Link to="/" className=" pt-2 text-cyan-700">
+            <div className="flex justify-start items-center">
+              <Link to="/" className=" pt-2 text-cyan-600 ">
                 <Tooltip title="Back to home">
                   <ArrowBackIcon />
                 </Tooltip>
               </Link>
-              <h1 className="text-cyan-800 text-xl  pt-2 mx-2">
-                Sign up Phoenix Store
-              </h1>
+              <span className="text-cyan-800 text-md ml-2 mt-2 font-poppins">
+                Back to home page
+              </span>
+            </div>
+            <hr className="my-2 border-cyan-600" />
+            <div className="text-center font-bold mb-2 mx-2">
+              <h1 className="text-cyan-800 text-xl">Sign up Phoenix Store</h1>
             </div>{" "}
-            <hr className="my-2 border-amber-700" />
             <form onSubmit={submitHandler}>
               <div className="relative w-full mb-3">
                 <label
@@ -49,7 +55,7 @@ export default function Signup() {
                 <input
                   type="text"
                   className="border-0 px-3 py-2 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="username"
+                  placeholder="John Doe"
                   style={{ transition: "all .15s ease" }}
                   name="username"
                   onChange={onChangeHandler}
@@ -66,7 +72,7 @@ export default function Signup() {
                 <input
                   type="email"
                   className="border-0 px-3 py-2 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Email"
+                  placeholder="johndoe@gmail.com"
                   style={{ transition: "all .15s ease" }}
                   name="email"
                 />
@@ -82,7 +88,7 @@ export default function Signup() {
                 <input
                   type="password"
                   className="border-0 px-3 py-2 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                  placeholder="Password"
+                  placeholder="**********"
                   style={{ transition: "all .15s ease" }}
                   name="password"
                   value={form.password || ""}
@@ -113,7 +119,7 @@ export default function Signup() {
 
               <div className="text-center mt-4">
                 <button
-                  className="bg-cyan-400 text-white active:bg-white active:text-  text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
+                  className=" bg-gradient-to-r from-cyan-300 to-blue-600  text-white active:bg-white active:text-  text-md font-bold uppercase px-6 py-3 rounded-xl shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full"
                   type="submit"
                   style={{ transition: "all .15s ease" }}
                 >
@@ -121,7 +127,7 @@ export default function Signup() {
                 </button>
               </div>
             </form>
-            <div className="px-6 py-4">
+            <div className="px-6 py-2">
               <div className="text-center mb-3">
                 <h6 className="text-gray-600 text-sm font-bold">
                   Or Sign up with

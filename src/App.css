@@ -9,23 +9,6 @@
     background: rgb(21, 150, 255);
   }
 
-#login{
-  background-image: url('./images/happy\ shopping\ light\ spot\ poster_1035507.jpg'); 
-  background-position: center;
-  background-repeat: no-repeat ;
-  background-size: cover;
-  background-position:initial;
-  position: absolute;
-}
-
-#signup{
-  background-image: url('https://static.vecteezy.com/system/resources/previews/002/623/464/non_2x/concept-of-shopping-online-with-smart-phone-on-blue-sky-background-vector.jpg'); 
-  background-position: center;
-  background-repeat: no-repeat ;
-  background-size: cover;
-  background-position:initial;
-  position: absolute;
-}
 
 .active-nav{
     display: inline-block;
