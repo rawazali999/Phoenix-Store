@@ -11,6 +11,7 @@ export default function Signup() {
   const navigate = useNavigate();
   const [form, setForm] = useState({});
 
+
   function submitHandler(e) {
     e.preventDefault();
     dispatch(login(form.username));

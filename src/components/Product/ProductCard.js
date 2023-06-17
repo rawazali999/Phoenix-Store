@@ -24,7 +24,7 @@ export default function ProductCard({ product }) {
         <img
           className="object-contain w-full h-48 mt-2"
           src={product.image}
-          alt="N"
+          alt="product"
         />
         <div className="flex items-center justify-between px-2 py-2">
           <Rating

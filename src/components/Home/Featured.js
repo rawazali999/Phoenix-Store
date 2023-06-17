@@ -12,7 +12,7 @@ export default function Featured({ product }) {
     const dispatch = useDispatch();
 
   return (
-    <div className="max-w-xs border p-2 ">
+    <div className="max-w-xs shadow-xl rounded-xl dark:border p-2 ">
       <Link
         to={`/products/${product.id}`}
         className="block relative h-48 rounded overflow-hidden"

@@ -21,7 +21,7 @@ export default function HeroSection() {
           <p className="pr-5 text-base text-custom1 dark:text-gray-300 md:text-lg">
             Our store has best products in each category :
           </p>
-          <p className="pr-5 mb-5 text-base text-sky-900 dark:text-cyan-300 md:text-lg">
+          <p className="pr-5 mb-5 text-base text-sky-900 dark:text-white md:text-lg">
             Electronics , Men Clothes <br /> Women Clothes , Jewelries
           </p>
           <div className="flex items-center">

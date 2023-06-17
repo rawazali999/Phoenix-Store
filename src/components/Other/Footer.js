@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="relative mt-16  rounded-t-3xl bg-gradient-to-r from-cyan-300 to-blue-600 dark:from-darkFrom dark:bg-darkTo">
+    <div className="relative mt-16  bg-gradient-to-r from-cyan-300 to-blue-600 dark:from-dark1 dark:bg-dark1">
       <div className="px-4  mx-auto py-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 row-gap-10 ">
           {/* logo and contact details */}
