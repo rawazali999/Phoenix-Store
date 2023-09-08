@@ -24,23 +24,20 @@ export default function Home() {
       });
   }, []);
   return (
-    <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo">
+    <div className="bg-custom4  dark:bg-dark1">
       <Layout>
-        <div className="flex capitalize  items-center justify-center text-xl sm:text-3xl font-semibold tracking-wider mt-10 text-custom1 dark:text-gray-100">
-          <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo  px-4">
-            welcome to online store
-          </div>
+        <div className="flex  justify-center bg-inherit uppercase px-4 pt-10 text-xl sm:text-3xl font-semibold tracking-widest  text-custom3 dark:text-gray-100">
+          welcome to online store
         </div>
-        <hr className="border-2 rounded-full w-4/5 md:w-2/5  mx-auto  border-cyan-500 -mt-5 " />
         <HeroSection />
         <MainServices />
         <Carousel />
-        <div className="flex capitalize  items-center justify-center text-xl sm:text-3xl font-semibold tracking-wider mt-10 text-custom1 dark:text-gray-100">
-          <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo  px-4">
+
+        <div className="flex items-center justify-center text-xl sm:text-3xl font-semibold tracking-wider mt-10 text-custom1 dark:text-gray-100">
+          <div className="bg-inherit dark:bg-dark1 uppercase  px-4 ">
             featured products
           </div>
         </div>
-        <hr className="border-2 rounded-full w-4/5 md:w-2/5  mx-auto  border-cyan-500 -mt-5 " />
         {isLoading ? (
           <Spinner />
         ) : (

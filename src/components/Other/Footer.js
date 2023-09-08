@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <div className="relative mt-16  bg-gradient-to-r from-cyan-300 to-blue-600 dark:from-dark1 dark:bg-dark1">
+    <footer className="relative mt-16  bg-custom1 dark:bg-dark1 border-t">
       <div className="px-4  mx-auto py-10 sm:max-w-xl md:max-w-full lg:max-w-screen-xl ">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 row-gap-10 ">
           {/* logo and contact details */}
@@ -26,7 +26,7 @@ export default function Footer() {
                 Online Store
               </span>
             </Link>
-            <div className="m-4 lg:max-w-sm grid grid-cols-1 dark:text-gray-200 ">
+            <div className="m-4 lg:max-w-sm grid grid-cols-1 text-gray-100 ">
               <div className="my-1">
                 <LocationOnIcon />
                 <span className="mx-4">Erbil , Kurdistan</span>
@@ -40,7 +40,7 @@ export default function Footer() {
                 <span className="mx-4 ">info@company.com</span>
               </div>
             </div>
-            <div className="m-4 text-custom1 dark:text-gray-100">
+            <div className="m-4 text-gray-100">
               You can find us at:
             </div>
             <div className="flex items-center m-4 space-x-8 text-custom1 dark:text-gray-100 ">
@@ -91,7 +91,7 @@ export default function Footer() {
           {/* categories links */}
           <div className="my-2 px-2">
             <p className="font-semibold text-white ">Category</p>
-            <ul className="mt-2 space-y-2 text-custom1  dark:text-gray-200 ">
+            <ul className="mt-2 space-y-2 text-gray-100 ">
               <li>
                 <Link
                   to="/men"
@@ -129,7 +129,7 @@ export default function Footer() {
           {/* some other links */}
           <div className="my-2 px-4 ">
             <p className="font-semibold tracking-wide text-white">Pages</p>
-            <ul className="mt-2 space-y-2 text-custom1 dark:text-gray-100 ">
+            <ul className="mt-2 space-y-2 text-gray-100 ">
               <li>
                 <Link
                   to="/"
@@ -183,11 +183,11 @@ export default function Footer() {
                 placeholder="Email"
                 required
                 type="text"
-                className="flex-grow w-52 mr-2 lg:mr-0 h-12 px-4 mb-3 transition duration-200 bg-white border-2 border-custom1 dark:border-gray-50   rounded lg:rounded-r-none shadow-sm appearance-none lg:mb-0  focus:outline-none focus:shadow-outline"
+                className="flex-grow w-52 mr-2 lg:mr-0 h-12 px-4 mb-3 transition duration-200 bg-white border-2 border-white dark:border-gray-50   rounded lg:rounded-r-none shadow-sm appearance-none lg:mb-0  focus:outline-none focus:shadow-outline"
               />
               <button
                 type="submit"
-                className="w-52 lg:w-28 h-12  mr-2 lg:mr-0 px-2  font-semibold tracking-wide text-white dark:text-gray-100 transition duration-200 rounded lg:rounded-l-none shadow-md bg-custom1 dark:bg-inherit border-2 border-custom1 dark:border-gray-50  focus:shadow-outline focus:outline-none"
+                className="w-52 lg:w-28 h-12  mr-2 lg:mr-0 px-2  font-semibold tracking-wide text-white dark:text-gray-100 transition duration-200 rounded lg:rounded-l-none shadow-md bg-custom1 dark:bg-inherit border-2 border-gray-100 dark:border-gray-50  focus:shadow-outline focus:outline-none"
               >
                 Subscribe
               </button>
@@ -195,12 +195,12 @@ export default function Footer() {
             <p className="mt-4 text-sm text-gray-100">
               get information about latest news , offers, discounts...
             </p>
-            <p className="text-sm font-semibold my-10 text-custom1 dark:text-gray-100 ">
+            <p className="text-sm font-semibold my-10 text-gray-100 ">
               © Copyright 2022 Online Store. All rights reserved.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

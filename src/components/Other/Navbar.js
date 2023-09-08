@@ -46,7 +46,7 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <div className="flex flex-col  bg-gradient-to-r  from-cyan-300  to-blue-600  dark:from-dark1  dark:to-dark1  md:px-4 px-1  shadow-sm  sm:pb-2 ">
+        <nav className="flex flex-col w-full  bg-custom1  dark:bg-dark1 border-b md:px-4 px-1  shadow-sm  sm:pb-2 ">
           {/* first row  */}
           <div className="flex justify-between  w-full  sm:pb-2 ">
             {/* name and logo */}
@@ -55,7 +55,10 @@ export default function Navbar() {
               <Disclosure.Button className="inline-flex items-center justify-center   rounded-md text-white navlink">
                 <span className="sr-only">Open main menu</span>
                 {open ? (
-                  <CloseRoundedIcon className="block  w-10" aria-hidden="true" />
+                  <CloseRoundedIcon
+                    className="block  w-10"
+                    aria-hidden="true"
+                  />
                 ) : (
                   <MenuRoundedIcon className="block w-10" aria-hidden="true" />
                 )}
@@ -69,9 +72,8 @@ export default function Navbar() {
                   alt="logo"
                 />
               </Link>
-              <span className="font-medium font-Robonto pre text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
-                Online <br className="block sm:hidden"/>
-                Store
+              <span className="font-medium font-Robonto text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
+                Online Store
               </span>
             </div>
 
@@ -284,7 +286,7 @@ export default function Navbar() {
               ))}
             </div>
           </Disclosure.Panel>
-        </div>
+        </nav>
       )}
     </Disclosure>
   );

@@ -32,7 +32,7 @@ export default function Featured({ product }) {
         </h2>
         <div className="flex justify-between">
           <p className="mt-1 dark:text-gray-50 text-lg">${product.price}</p>
-          <div className="flex py-1 px-2 space-x-2   bg-slate-500 rounded-sm">
+          <div className="flex py-1 px-2 space-x-2 bg-custom1 dark:bg-dark2 rounded-sm">
             <button
               onClick={() => {
                 dispatch(

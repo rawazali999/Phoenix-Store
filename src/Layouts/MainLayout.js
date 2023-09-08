@@ -4,9 +4,7 @@ export default function MainLayout(props) {
   return (
     <>
       <Navbar />
-      <div className="bg-white dark:bg-gradient-to-r dark:from-darkFrom dark:bg-darkTo">
-        {props.children}
-      </div>
+      <div className="bg-inherit">{props.children}</div>
       <Footer />
     </>
   );

@@ -17,7 +17,7 @@ import Favorites from "./pages/Favorites";
 
 function App() {
   return (
-    <div className="font-lato bg-gradient-to-r dark:from-darkFrom dark:to-darkTo ">
+    <div className="font-lato bg-custom4 dark:bg-dark1  ">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />

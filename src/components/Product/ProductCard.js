@@ -11,7 +11,7 @@ import Tooltip from "@mui/material/Tooltip";
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
   return (
-    <div className="max-w-xs mx-auto overflow-hidden border-2 border-gray-900 dark:border-gray-50  bg-white dark:bg-slate-900 rounded shadow-2xl">
+    <div className="max-w-xs mx-auto overflow-hidden border-2 border-custom1 dark:border-gray-100  dark:bg-gray-900  dark:bg-dark2 rounded shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100 capitalize">
@@ -26,7 +26,7 @@ export default function ProductCard({ product }) {
           src={product.image}
           alt="product"
         />
-        <div className="flex items-center justify-between px-2 py-2">
+        <div className="flex items-center justify-between p-2">
           <Rating
             name="float-rating"
             size="small"
@@ -39,9 +39,9 @@ export default function ProductCard({ product }) {
           </label>
         </div>
       </Link>
-      <div className="flex items-center justify-between  px-4 py-2 bg-gray-900 dark:bg-gray-700">
+      <div className="flex items-center justify-between  px-4 py-2 bg-custom1 dark:bg-inherit dark:border-t">
         <h1 className="text-xl font-bold text-white">{product.price} $</h1>
-        <div className="flex space-x-1">
+        <div className="flex space-x-1 text-white">
           <button
             onClick={() => {
               dispatch(
@@ -54,7 +54,7 @@ export default function ProductCard({ product }) {
                 })
               );
             }}
-            className="flex ml-auto text-white  px-2 "
+            className="flex ml-auto text-inherit px-2 "
           >
             <Tooltip title="Add to cart">
               <ShoppingCartOutlinedIcon className="ml-2" />

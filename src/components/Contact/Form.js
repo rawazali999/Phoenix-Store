@@ -18,7 +18,6 @@ export default function Form() {
                     outline-none
                     focus-visible:shadow-none
                     focus:border-custom1
-                    
                     "
         />
       </div>
@@ -80,12 +79,12 @@ export default function Form() {
           type="submit"
           className="
                     w-full
-                    text-white
-                    dark:text-custom1
-                    bg-custom1
-                    dark:bg-gray-100
+                    text-custom1
+                    dark:text-custom4
+                    bg-custom4
+                    dark:bg-dark1
                     rounded-md
-                    border border-custom1
+                    border 
                     p-3
                     transition
                     hover:bg-opacity-90
