@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function Summary() {
   const cart = useSelector((state) => state.cart.items);
@@ -17,7 +18,7 @@ export default function Summary() {
     return { totalPrice, totalQuantity, totalPriceWithTax, Tax };
   };
   return (
-    <div className="xl:w-1/2 md:w-1/3 w-full bg-gray-100 dark:bg-inherit   h-full">
+    <div className="xl:w-1/2 md:w-1/3 w-full bg-gray-100  dark:bg-slate-800 h-full">
       <div className="flex flex-col md:h-screen px-14 py-20 justify-between overflow-y-auto">
         <div className="text-gray-800 dark:text-gray-100">
           <p className="text-4xl font-black leading-9 ">Summary</p>
@@ -49,9 +50,12 @@ export default function Summary() {
                 : "$" + getTotal().totalPriceWithTax.toFixed(2)}
             </p>
           </div>
-          <button className="text-xl rounded-md leading-none w-full py-5 bg-gray-800 dark:bg-gray-100 border-gray-800 border focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-gray-800  text-white dark:text-gray-800">
-            Checkout
-          </button>
+
+          <Link to={"/checkout"}>
+            <button className="text-xl rounded-md leading-none w-full py-5 bg-gray-800 dark:bg-gray-100 border-gray-800 border focus:outline-none focus:ring-4 focus:ring-offset-2 focus:ring-gray-800  text-white dark:text-gray-800">
+              Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>

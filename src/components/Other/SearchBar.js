@@ -1,32 +1,46 @@
 import React from "react";
-export default function SearchBar() {
-  return (
-    <form>
-      <div className="relative">
-        <input
-          type="search"
-          className="block  p-2  w-72 text-sm bg-white dark:bg-inherit  border-2 border-gray-100 focus:border-custom4 focus:outline-none "
-          placeholder="Search..."
-        />
+import { useEffect } from "react";
+import { useState } from "react";
+import { SearchCard } from "./SearchCard";
 
-        <div className="flex absolute inset-y-0 right-0 items-center pl-3 mx-2 pointer-events-none">
-          <svg
-            aria-hidden="true"
-            className="w-5 h-5 text-custom1 dark:text-gray-100"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-        </div>
+export default function SearchBar() {
+  const [search, setSearch] = useState("");
+  const [results, setResults] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [display, setDisplay] = useState("hidden");
+
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products`)
+      .then((res) => res.json())
+      .then((json) => setProducts(json));
+  }, []);
+
+  useEffect(() => {
+    if (search === "") {
+      setResults([]);
+      setDisplay("hidden");
+    } else {
+      const searchResults = products.filter((product) => {
+        return product.title.toLowerCase().includes(search.toLowerCase());
+      });
+      setResults(searchResults);
+      setDisplay("block");
+    }
+  }, [products, search]);
+  return (
+    <div className="relative">
+      <input
+        onChange={(e) => setSearch(e.target.value)}
+        type="search"
+        className="block  p-2  w-72 text-sm bg-white dark:bg-inherit  border-2 border-gray-100 focus:border-custom4 focus:outline-none "
+        placeholder="Search..."
+      />
+
+      <div className={`${display} overflow-y-auto  absolute z-20 w-full h-96 `}>
+        {results.map((product) => (
+          <SearchCard product={product} key={product.id} />
+        ))}
       </div>
-    </form>
+    </div>
   );
 }

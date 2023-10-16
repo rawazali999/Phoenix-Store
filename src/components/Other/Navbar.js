@@ -46,11 +46,11 @@ export default function Navbar() {
   return (
     <Disclosure as="nav">
       {({ open }) => (
-        <nav className="flex flex-col w-full  bg-custom1  dark:bg-dark1 border-b md:px-4 px-1  shadow-sm  sm:pb-2 ">
+        <nav className="flex flex-col w-full  bg-custom1  dark:bg-dark1 border-b-2 md:px-4 px-1  shadow-lg  sm:pb-2 ">
           {/* first row  */}
-          <div className="flex justify-between  w-full  sm:pb-2 ">
+          <div className="flex justify-between items-center w-full pt-4 ">
             {/* name and logo */}
-            <div className="text-my block sm:hidden mx-1 mt-4">
+            <div className="text-md block sm:hidden mx-1 ">
               {/* Mobile size screen menu button*/}
               <Disclosure.Button className="inline-flex items-center justify-center   rounded-md text-white navlink">
                 <span className="sr-only">Open main menu</span>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 )}
               </Disclosure.Button>
             </div>
-            <div className="flex items-center text-custom3 my-auto sm:mt-4">
+            <div className="flex items-center text-custom3 my-auto ">
               <Link to={"/"}>
                 <img
                   className="mx-0.5 w-10 sm:w-14 h-auto"
@@ -72,18 +72,18 @@ export default function Navbar() {
                   alt="logo"
                 />
               </Link>
-              <span className="font-medium font-Robonto text-white text-md mt-1 sm:mt-4 lg:text-3xl sm:text-xl  ">
+              <span className="font-medium font-Robonto text-white text-md  lg:text-3xl sm:text-xl  ">
                 Online Store
               </span>
             </div>
 
             {/* search bar */}
-            <div className="relative hidden sm:flex flex-shrink text-gray-600 dark:text-gray-100 mt-8 md:mr-10 mr-0  w-auto ">
+            <div className="relative hidden sm:flex flex-shrink text-gray-600 dark:text-gray-100  md:mr-10 mr-0  w-auto ">
               <SearchBar />
             </div>
 
             {/* theme and wishlist and  Login and Cart buttons*/}
-            <div className="flex justify-between md:mt-2">
+            <div className="flex justify-between items-center">
               <ThemeToggle />
               {/* wishlist page button  */}
               <Tooltip title="Wishlist">
@@ -93,12 +93,10 @@ export default function Navbar() {
                   aria-label="Wishlist"
                 >
                   {getTotalFav() > 0 ? (
-                    <span className=" text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 p-0.5 text-custom1  ml-4 ">
+                    <span className=" absolute top-2 text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 p-0.5 text-custom1  ml-4 ">
                       {getTotalFav() || 0}
                     </span>
-                  ) : (
-                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
-                  )}
+                  ) : null}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -124,12 +122,10 @@ export default function Navbar() {
                   className="navlink px-1 mr-2"
                 >
                   {getTotalQuantity() > 0 ? (
-                    <span className="text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
+                    <span className=" absolute top-2 text-xs sm:text-sm font-semibold rounded-sm bg-white px-1 py-0.5 text-custom1  ml-4 ">
                       {getTotalQuantity() || 0}
                     </span>
-                  ) : (
-                    <span className="sm:text-sm text-xs  px-2 py-0.5 ml-4 -mr-4"></span>
-                  )}
+                  ) : null}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="w-5 sm:w-7 text-white "
@@ -149,7 +145,7 @@ export default function Navbar() {
 
               {auth.isAuthenticated ? (
                 <>
-                  <Menu as="div" className="mt-5  w-10 h-auto">
+                  <Menu as="div" className="  w-10 h-auto">
                     <Menu.Button className="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-custom3 focus:ring-white">
                       <span className="sr-only">Open user menu</span>
                       <img
@@ -168,7 +164,7 @@ export default function Navbar() {
                       leaveFrom="transform opacity-100 scale-100"
                       leaveTo="transform opacity-0 scale-95"
                     >
-                      <Menu.Items className="origin-top-right text-custom1 dark:text-white  absolute right-0 mt-2 w-40 rounded-md shadow-lg py-1 bg-gray-100 dark:bg-slate-600 ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <Menu.Items className="origin-top-right text-custom1 dark:text-white  absolute right-0  w-40 rounded-md shadow-lg py-1 bg-gray-100 dark:bg-slate-600 ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <Menu.Item>
                           {({ active }) => (
                             <NavLink
@@ -215,7 +211,10 @@ export default function Navbar() {
                       </Menu.Items>
                     </Transition>
                   </Menu>
-                  <div className="text-gray-200 mt-2 text-sm sm:text-lg py-4">
+                  <div
+                    className="text-gray-200 
+                   text-sm sm:text-lg py-4"
+                  >
                     {auth.username}
                   </div>
                 </>
@@ -223,7 +222,7 @@ export default function Navbar() {
                 <Tooltip title="Login">
                   <Link
                     to="/login"
-                    className="mt-6 navlink   lg:inline-block text-white px-1 mb-1 flex"
+                    className=" navlink   lg:inline-block text-white px-1 mb-1 flex"
                     aria-label="Login"
                   >
                     <svg
@@ -266,7 +265,7 @@ export default function Navbar() {
           {/* mobile size navbar links panel */}
           <Disclosure.Panel>
             <div className="grid grid-cols-3 px-2 pt-2 pb-3 border-b sm:hidden">
-              <div className="col-span-3 relative flex justify-center text-gray-600 dark:text-gray-100 my-2  w-auto ">
+              <div className="col-span-3 relative flex justify-center text-gray-600 dark:text-gray-100   w-auto ">
                 <SearchBar />
               </div>
 

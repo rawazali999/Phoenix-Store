@@ -7,11 +7,19 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../app/slices/cartSlice";
 import Tooltip from "@mui/material/Tooltip";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <div className="max-w-xs mx-auto overflow-hidden border-2 border-custom1 dark:border-gray-100  dark:bg-gray-900  dark:bg-dark2 rounded shadow-2xl">
+    <div className="max-w-xs mx-auto overflow-hidden  dark:border-gray-100  dark:bg-gray-700  dark:bg-dark2 rounded shadow-2xl">
       <Link to={`/products/${product.id}`}>
         <div className="px-4 py-2">
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100 capitalize">
@@ -51,6 +59,8 @@ export default function ProductCard({ product }) {
                   price: product.price,
                   image: product.image,
                   category: product.category,
+                  size: "MD",
+                  color: "Black",
                 })
               );
             }}

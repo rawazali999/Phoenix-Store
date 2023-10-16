@@ -96,11 +96,11 @@ export default function NewCarousel() {
             />
           </div>
 
-          <div className=" col-span-2  ">
+          <div className="col-span-2">
             <img
               className=" h-auto w-auto"
-              src="https://www.trendybizz.com/wp-content/uploads/2021/11/wardrobe-essentials-every-woman-should-own-920x518-1.jpg"
-              alt="3 girls"
+              src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/02/20/12/lfwstreetstyle2002j.jpg?width=968&auto=webp&quality=50&crop=968%3A645%2Csmart"
+              alt="4 girls"
             />
           </div>
         </div>

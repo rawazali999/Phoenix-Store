@@ -2,18 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   items: [],
 };
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
     addToCart: (state, action) => {
-      const itemInCart = state.items.find(
-        (item) => item.id === action.payload.id
-      );
       // instead of using if else and push, we can use ternary operator with spread operator to add item to cart
-      itemInCart
-        ? itemInCart.quantity++
-        : (state.items = [...state.items, { ...action.payload, quantity: 1 }]);
+      state.items = [...state.items, { ...action.payload, quantity: 1 }];
     },
 
     incrementQuantity: (state, action) => {

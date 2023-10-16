@@ -7,7 +7,7 @@ const ThemeToggle = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
   return (
-    <div className="mt-6 sm:mt-6 ">
+    <>
       {theme === "dark" ? (
         <Tooltip title="Switch to Light Mode">
         <button
@@ -56,7 +56,7 @@ const ThemeToggle = () => {
         </button>
         </Tooltip>
       )}
-    </div>
+    </>
   );
 };
 

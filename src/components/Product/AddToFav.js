@@ -6,7 +6,6 @@ import { addToFav } from "../../app/slices/favoriteSlice";
 import { removeFav } from "../../app/slices/favoriteSlice";
 
 export default function AddToFav({ product }) {
-  
   const dispatch = useDispatch();
 
   const [buttonColor, setButtonColor] = useState("white");
@@ -35,7 +34,10 @@ export default function AddToFav({ product }) {
     <>
       <Tooltip title={title}>
         <FavoriteIcon
-          style={{ fill: buttonColor, cursor: "pointer" }}
+          style={{
+            fill: buttonColor,
+            cursor: "pointer",
+          }}
           onClick={handleClick}
         />
       </Tooltip>

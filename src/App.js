@@ -14,6 +14,7 @@ import NotFound404Page from "./pages/NotFound404Page";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Favorites from "./pages/Favorites";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="women" element={<Women />} />
         <Route path="products/:id" element={<Product />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={<Checkout />} />
         <Route path="favorites" element={<Favorites />} />
         <Route path="electronics" element={<Electronics />} />
         <Route path="ContactUs" element={<ContactUs />} />

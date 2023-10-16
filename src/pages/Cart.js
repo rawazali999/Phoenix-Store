@@ -9,8 +9,8 @@ export default function Cart() {
 
   return (
     <Layout>
-      <div className="flex md:flex-row flex-col justify-end">
-        <div className=" w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-white dark:bg-inherit  overflow-y-auto overflow-x-hidden h-screen">
+      <div className="flex flex-col md:flex-row">
+        <div className=" w-full md:pl-10 pl-4 pr-10 md:pr-4 md:py-12 py-8 bg-custom4 dark:bg-inherit  overflow-y-auto overflow-x-hidden h-screen">
           <p className="text-3xl sm:text-4xl font-black leading-10 text-gray-800 dark:text-gray-100 pt-3">
             Shopping Cart
           </p>
@@ -25,6 +25,8 @@ export default function Cart() {
                 price={item.price}
                 quantity={item.quantity}
                 category={item.category}
+                size={item.size}
+                color={item.color}
               />
             ))
           ) : (

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ContactInfo() {
   return (
-    <div className="max-w-[570px] -mt-10">
+    <div className="max-w-[570px] -mt-10 px-4 dark:text-gray-100">
       <span className="block mb-4 text-3xl text-custom1 dark:text-gray-100 font-semibold">
         Contact Us
       </span>

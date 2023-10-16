@@ -31,7 +31,7 @@ export default function Women() {
           </h1>
           <div className="container  mx-auto px-10 grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4  gap-10 object-fill">
             {products.map((product) => {
-              return <ProductCard product={product} />;
+              return <ProductCard product={product} key={product.id} />;
             })}
           </div>
         </>

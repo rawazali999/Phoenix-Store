@@ -9,7 +9,7 @@ export default function Favorites() {
     <Layout>
       <div className="flex  flex-col">
         <div className=" w-full  dark:bg-inherit ">
-          <p className="text-3xl sm:text-4xl text-center my-4 leading-10 text-custom1 dark:text-gray-100 pt-3">
+          <p className="text-3xl font-mono font-semibold sm:text-4xl text-center my-4 leading-10 text-custom1 dark:text-gray-100 pt-3">
             Favorite Products
           </p>
 

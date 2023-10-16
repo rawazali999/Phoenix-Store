@@ -2,8 +2,20 @@ import React from "react";
 import Rating from "@mui/material/Rating";
 import AddToFav from "./AddToFav";
 import AddToCardButton from "./AddToCardButton";
+import { useState } from "react";
 
 export default function ProductPage({ product }) {
+  const [size, setSize] = useState("MD");
+  const [color, setColor] = useState("Black");
+
+  const handleSizeChange = (event) => {
+    setSize(event.target.value);
+  };
+
+  const handleColorChange = (event) => {
+    setColor(event.target.value);
+  };
+
   return (
     <>
       <section className="body-font overflow-hidden">
@@ -77,7 +89,11 @@ export default function ProductPage({ product }) {
                 <div className="flex">
                   <span className="mr-3 mt-2 dark:text-gray-100">Color</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2 text-base pl-3 pr-10">
+                    <select
+                      value={color}
+                      onChange={handleColorChange}
+                      className="rounded border appearance-none border-gray-300 py-2 text-base pl-3 pr-10"
+                    >
                       <option>Black</option>
                       <option>White</option>
                       <option>Brown</option>
@@ -101,7 +117,11 @@ export default function ProductPage({ product }) {
                 <div className="flex ml-6 items-center">
                   <span className="mr-3 dark:text-gray-100">Size</span>
                   <div className="relative">
-                    <select className="rounded border appearance-none border-gray-300 py-2   text-base pl-3 pr-10">
+                    <select
+                      value={size}
+                      onChange={handleSizeChange}
+                      className="rounded border appearance-none border-gray-300 py-2   text-base pl-3 pr-10"
+                    >
                       <option>SM</option>
                       <option>MD</option>
                       <option>L</option>
@@ -124,11 +144,11 @@ export default function ProductPage({ product }) {
                 </div>
               </div>
               <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900 dark:text-white">
+                <span className="font-semibold text-2xl text-gray-900  dark:text-white">
                   $ {product.price}
                 </span>
-                <AddToCardButton product={product} />
-                <button className="rounded-full w-10 h-10 bg-custom4 dark:bg-inherit p-0 border-2 inline-flex items-center justify-center ml-4">
+                <AddToCardButton product={product} size={size} color={color} />
+                <button className="rounded-full w-10 h-10 bg-custom1  dark:bg-inherit inline-flex items-center justify-center ml-4">
                   <AddToFav product={product} />
                 </button>
               </div>

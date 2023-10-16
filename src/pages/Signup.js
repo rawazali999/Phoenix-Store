@@ -27,7 +27,7 @@ export default function Signup() {
       id="signup"
       className=" w-screen h-screen bg-custom1 grid place-content-center"
     >
-      <div className="flex flex-col mb-10 w-80">
+      <div className="flex flex-col mb-10">
         <div className="flex flex-col items-center p-4 text-white">
           <div>
             <Link to="/" className=" pt-2">

@@ -6,16 +6,17 @@ import { addToCart } from "../../app/slices/cartSlice";
 import { removeFav } from "../../app/slices/favoriteSlice";
 import { delimiter } from "../../utilities/delimiter";
 import { Tooltip } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function FavoriteCard({ id, image, title, price, category }) {
   const dispatch = useDispatch();
   return (
     <div className="inline">
       <div className="flex flex-col items-center justify-center w-full ">
-        <div
+        <Link to={`/products/${id}`}
           className="w-full h-64 bg-white bg-center bg-contain bg-no-repeat rounded-lg shadow-md"
           style={{ backgroundImage: `url(${image})` }}
-        ></div>
+        ></Link>
 
         <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
           <h3 className="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">
